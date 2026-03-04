@@ -80,6 +80,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 26. Added Facebook and Instagram header icons linked to official school social pages
 27. Applied platform-brand hover colors (Facebook blue, Instagram pink) and improved responsive gallery image rendering for mobile usability
 28. Made gallery photos tappable/clickable to open in a new tab, with visible "Tap to open" cue for mobile users
+29. Rolled back tap-to-open gallery interaction changes as per user request
 
 ## Prioritized Backlog
 ### P0 (High Priority)
