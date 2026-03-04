@@ -320,7 +320,7 @@ export const safetyPolicies = [
 export const imageAssets = {
   hero: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/yfjw0b1u_1000046477.png",
   building: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/yfjw0b1u_1000046477.png",
-  classroom: "https://images.unsplash.com/photo-1709290749293-c6152a187b14",
+  classroom: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/fel4mtxi_1000047531.jpg",
   activities: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/jk3mht3k_1000047533.jpg",
   campusGreen: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/gz6em1ji_1000047535.jpg",
   schoolWalk: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/lqz6l55j_1000047536.jpg",
