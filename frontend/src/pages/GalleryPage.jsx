@@ -24,13 +24,13 @@ export const GalleryPage = () => {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-testid="gallery-photo-grid">
           {schoolLifeGallery.map((item) => (
             <Card key={item.title} className="overflow-hidden border-slate-200 bg-white" data-testid={`gallery-card-${slugify(item.title)}`}>
-              <div className="aspect-[4/5] w-full overflow-hidden" data-testid={`gallery-image-wrapper-${slugify(item.title)}`}>
+              <div className="aspect-[4/5] w-full overflow-hidden" data-testid={`gallery-frame-${slugify(item.title)}`}>
                 <img
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-cover object-center transition-transform duration-300 hover:scale-105"
                   loading="lazy"
-                  data-testid={`gallery-image-${slugify(item.title)}`}
+                  data-testid={`gallery-photo-${slugify(item.title)}`}
                 />
               </div>
               <CardContent className="space-y-2 p-5">

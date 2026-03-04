@@ -11,6 +11,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Disclosure page: mandatory school information + important documents
 - Contact form: save submissions in backend
 - Follow-up request: fully replace demo text with uploaded `WEBSITE-1.docx` content, use uploaded school image on home hero, make hero content box transparent
+- Follow-up request: upload additional school photos and make them relatable in website via a school life gallery
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -26,6 +27,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
    - /about-us
    - /academics
    - /activities
+   - /gallery
    - /disclosure
    - /contact-us
    - typo alias redirect /acitivities -> /activities
@@ -44,6 +46,8 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
    - curl API tests passed
    - browser flow screenshots captured
    - testing agent suites passed (frontend + backend), including extended field regression tests
+11. Added School Life Gallery page using uploaded real school photos with captions and categories
+12. Updated Academics/Activities contextual images to user-provided photos for better authenticity
 
 ## Prioritized Backlog
 ### P0 (High Priority)
@@ -56,7 +60,6 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Tighten CORS origin configuration for production safety
 
 ### P2 (Low Priority)
-- Add gallery/news/events page
 - Add downloadable admission brochure and online admission pre-registration
 - Add SEO metadata + structured data for better search visibility
 
@@ -64,3 +67,4 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 1. Upload and map actual disclosure policy PDFs for each listed policy
 2. Add admin enquiry review view with filters and export option
 3. Final content QA for all school details and official wording from management
+4. Optionally add filter tabs (Academics/Sports/Student Life) inside gallery page
