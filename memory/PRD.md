@@ -88,6 +88,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 34. Updated opening hours and visitor timings across Contact + Footer with detailed schedule text
 35. Added LinkedIn social icon/link widget in header (desktop + mobile menu)
 36. Improved hero contrast for school name/text by darkening overlay/card and adding text shadow for readability
+37. Applied second hero refinement pass: slightly brighter image with darker top overlay for balanced readability and visual depth
 
 ## Prioritized Backlog
 ### P0 (High Priority)
