@@ -16,6 +16,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Follow-up request: keep separate Download button and add small PDF icons + file size labels in Disclosure
 - Follow-up request: add provided school site logo beside school name in header
 - Follow-up request: place logo in footer + favicon and add subtle hover animation/glow
+- Follow-up request: update school address and phone number
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -56,6 +57,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 14. Disclosure document list now has separate Open + Download actions, PDF badges, and file-size labels for each file
 15. Added provided school logo beside school name/tagline in top header navigation
 16. Added same logo in footer branding, configured favicon/apple-touch icon, and applied subtle premium hover glow animation on logos
+17. Updated school contact details globally: address and phone number reflected across contact and footer sections
 
 ## Prioritized Backlog
 ### P0 (High Priority)
