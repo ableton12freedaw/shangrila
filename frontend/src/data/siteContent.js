@@ -77,7 +77,7 @@ export const leadershipMessages = [
   },
   {
     role: "Principal",
-    name: "Principal",
+    name: "MRS. SWATI DAMLE",
     summary:
       "With dedicated faculty and balanced focus on academics, values, and co-curricular experiences, we nurture responsible, thoughtful, and lifelong learners.",
   },
