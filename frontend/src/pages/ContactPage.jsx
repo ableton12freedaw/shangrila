@@ -81,8 +81,13 @@ export const ContactPage = () => {
             <p className="flex items-center gap-3 text-sm text-slate-700" data-testid="contact-email-row">
               <Mail className="h-5 w-5 text-amber-600" /> {schoolIdentity.email}
             </p>
-            <p className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700" data-testid="contact-working-hours-row">
+            <p className="whitespace-pre-line rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700" data-testid="contact-working-hours-row">
               {schoolIdentity.workingHours}
+            </p>
+            <p className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700" data-testid="contact-visitor-hours-row">
+              <span className="font-semibold text-slate-900">Visitor Timings:</span> {schoolIdentity.visitorTimings}
+              <br />
+              ({schoolIdentity.visitorNote})
             </p>
           </CardContent>
         </Card>

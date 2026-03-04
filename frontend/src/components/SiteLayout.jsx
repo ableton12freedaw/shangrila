@@ -190,7 +190,14 @@ export const SiteLayout = ({ children }) => {
 
           <div className="space-y-3" data-testid="footer-working-hours">
             <h4 className="text-lg font-semibold text-white">Office Hours</h4>
-            <p className="text-sm leading-7">{schoolIdentity.workingHours}</p>
+            <p className="whitespace-pre-line text-sm leading-7" data-testid="footer-opening-hours-text">
+              {schoolIdentity.workingHours}
+            </p>
+            <p className="text-sm leading-7 text-slate-200" data-testid="footer-visitor-timings-text">
+              <span className="font-semibold text-white">Visitor Timings:</span> {schoolIdentity.visitorTimings}
+              <br />
+              <span className="text-slate-300">({schoolIdentity.visitorNote})</span>
+            </p>
             <p className="text-xs text-slate-400" data-testid="footer-copyright-text">
               © {new Date().getFullYear()} {schoolIdentity.name}. All rights reserved.
             </p>
