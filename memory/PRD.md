@@ -91,6 +91,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 37. Applied second hero refinement pass: slightly brighter image with darker top overlay for balanced readability and visual depth
 38. Added warm-tone tuning + responsive overlay intensity (mobile darker, desktop balanced) for consistent hero readability
 39. Rolled back the latest warm-tone/overlay-intensity pass to restore previous hero balance
+40. Rolled back all hero contrast enhancements to restore the original hero styling
 
 ## Prioritized Backlog
 ### P0 (High Priority)
