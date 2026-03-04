@@ -1,4 +1,4 @@
-import { Download, FileText } from "lucide-react";
+import { Download, ExternalLink, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageSection } from "@/components/PageSection";
@@ -41,22 +41,46 @@ export const DisclosurePage = () => {
             {disclosureDocuments.map((doc) => (
               <div
                 key={doc.title}
-                className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3"
+                className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3"
                 data-testid={`disclosure-document-row-${slugify(doc.title)}`}
               >
-                <p className="flex items-center gap-2 text-sm font-medium text-slate-700" data-testid={`disclosure-document-name-${slugify(doc.title)}`}>
-                  <FileText className="h-4 w-4 text-amber-600" /> {doc.title}
-                </p>
-                <Button asChild variant="outline" size="sm" className="h-9 rounded-full border-primary text-primary" data-testid={`disclosure-document-download-${slugify(doc.title)}`}>
-                  <a
-                    href={doc.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-testid={`disclosure-document-open-link-${slugify(doc.title)}`}
-                  >
-                    <Download className="mr-1 h-4 w-4" /> View
-                  </a>
-                </Button>
+                <div className="min-w-0" data-testid={`disclosure-document-meta-${slugify(doc.title)}`}>
+                  <p className="flex items-center gap-2 text-sm font-medium text-slate-700" data-testid={`disclosure-document-name-${slugify(doc.title)}`}>
+                    <FileText className="h-4 w-4 text-amber-600" /> {doc.title}
+                    <span
+                      className="rounded-full bg-rose-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-rose-700"
+                      data-testid={`disclosure-document-pdf-badge-${slugify(doc.title)}`}
+                    >
+                      PDF
+                    </span>
+                  </p>
+                  <p className="mt-1 text-xs text-slate-500" data-testid={`disclosure-document-size-${slugify(doc.title)}`}>
+                    {doc.size}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2" data-testid={`disclosure-document-actions-${slugify(doc.title)}`}>
+                  <Button asChild variant="outline" size="sm" className="h-9 rounded-full border-primary text-primary" data-testid={`disclosure-document-open-${slugify(doc.title)}`}>
+                    <a
+                      href={doc.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-testid={`disclosure-document-open-link-${slugify(doc.title)}`}
+                    >
+                      <ExternalLink className="mr-1 h-4 w-4" /> Open
+                    </a>
+                  </Button>
+
+                  <Button asChild size="sm" className="h-9 rounded-full" data-testid={`disclosure-document-download-${slugify(doc.title)}`}>
+                    <a
+                      href={doc.url}
+                      download
+                      data-testid={`disclosure-document-download-link-${slugify(doc.title)}`}
+                    >
+                      <Download className="mr-1 h-4 w-4" /> Download
+                    </a>
+                  </Button>
+                </div>
               </div>
             ))}
           </CardContent>

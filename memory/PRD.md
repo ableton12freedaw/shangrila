@@ -13,6 +13,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Follow-up request: fully replace demo text with uploaded `WEBSITE-1.docx` content, use uploaded school image on home hero, make hero content box transparent
 - Follow-up request: upload additional school photos and make them relatable in website via a school life gallery
 - Follow-up request: add uploaded disclosure files as downloadable links opening in new tab
+- Follow-up request: keep separate Download button and add small PDF icons + file size labels in Disclosure
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -50,6 +51,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 11. Added School Life Gallery page using uploaded real school photos with captions and categories
 12. Updated Academics/Activities contextual images to user-provided photos for better authenticity
 13. Disclosure section now includes real uploaded certificates/PDFs as clickable links that open in a new tab
+14. Disclosure document list now has separate Open + Download actions, PDF badges, and file-size labels for each file
 
 ## Prioritized Backlog
 ### P0 (High Priority)

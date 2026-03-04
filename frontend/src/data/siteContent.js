@@ -283,26 +283,32 @@ export const disclosureDocuments = [
   {
     title: "Building Certificate",
     url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/frawetdf_building-certificate.pdf",
+    size: "190.4 KB",
   },
   {
     title: "Land Certificate",
     url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/xd9pciyc_land%20certificate.pdf",
+    size: "188.4 KB",
   },
   {
     title: "Population Certificate",
     url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/8yb38osl_population%20certificate.pdf",
+    size: "421.1 KB",
   },
   {
     title: "Fire Safety Certificate",
     url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/p9icr9qb_fire%20safety%20certificate.pdf",
+    size: "778.7 KB",
   },
   {
     title: "Extension of Affiliation Certificate",
     url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/mpl4ywv7_extention%20of%20affilitaion%20certificate.pdf",
+    size: "936.9 KB",
   },
   {
     title: "Academic Calendar",
     url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/9uu7iptm_academic%20calender.pdf",
+    size: "1.1 MB",
   },
 ];
 
