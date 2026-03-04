@@ -22,6 +22,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Follow-up request: keep welcome message separated as its own section
 - Follow-up request: move welcome message closer to hero and style it as quote block
 - Follow-up request: import teacher/staff details as staff cards in Academics below curriculum
+- Follow-up request: remove non-teaching staff from Academics staff cards
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -68,6 +69,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 20. Separated Home page welcome message into a dedicated standalone section/card
 21. Repositioned welcome section near hero and redesigned it as a premium quote block
 22. Imported teacher/staff details from uploaded document and added Staff Cards section in Academics below curriculum
+23. Removed non-teaching roles from Academics cards and retained only teaching/academic-support staff
 
 ## Prioritized Backlog
 ### P0 (High Priority)

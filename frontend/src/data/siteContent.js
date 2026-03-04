@@ -222,16 +222,6 @@ export const academicStaff = [
   { name: "MR. MUKESH ADHAU", designation: "Art Teacher", qualification: "MFA, B.ED", experience: "N/A", specialization: "Art" },
   { name: "MR. ATUL DHONGDE", designation: "Music Teacher", qualification: "B.A, Sangeet Visharad", experience: "15 Years", specialization: "Music" },
   { name: "MRS. SHYAM VERMA", designation: "PTI", qualification: "BA, B.PED", experience: "3 Years", specialization: "Physical Education" },
-  { name: "MRS. SONALI RAUT", designation: "Accountant", qualification: "B.COM", experience: "5 Years", specialization: "Accounting" },
-  { name: "MRS. VAISHALI BALPANDE", designation: "Clerk", qualification: "B.COM", experience: "14 Years", specialization: "Administration" },
-  { name: "MS. NIKHAT RIYAZ", designation: "Receptionist", qualification: "B.COM", experience: "1 Year", specialization: "Reception" },
-  { name: "MRS. JYOTI KHADSE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
-  { name: "MRS. SUSHILA TIJARE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
-  { name: "MRS. KANTA GOPALE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
-  { name: "MR. YADUNATH GOPALE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
-  { name: "MR. CHANDAN KAMBLE", designation: "Guard", qualification: "10th", experience: "N/A", specialization: "Campus Security" },
-  { name: "MRS. PRIYA BAWANE", designation: "Sweeper", qualification: "8th", experience: "N/A", specialization: "Housekeeping" },
-  { name: "MRS. SHAKUN BAWANE", designation: "Sweeper", qualification: "8th", experience: "N/A", specialization: "Housekeeping" },
 ];
 
 export const activitiesList = [
