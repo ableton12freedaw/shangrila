@@ -10,6 +10,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Language: English only
 - Disclosure page: mandatory school information + important documents
 - Contact form: save submissions in backend
+- Follow-up request: fully replace demo text with uploaded `WEBSITE-1.docx` content, use uploaded school image on home hero, make hero content box transparent
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -17,7 +18,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Database collections:
   - `contact_messages` for enquiry submissions
   - existing `status_checks` retained
-- UX approach: premium navy-gold theme, glassmorphism header, responsive section layouts, motion reveal
+- UX approach: premium navy-gold theme, transparent hero content panel, responsive section layouts, motion reveal
 
 ## What Has Been Implemented
 1. Multipage navigation and routes:
@@ -29,22 +30,25 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
    - /contact-us
    - typo alias redirect /acitivities -> /activities
 2. Fully designed pages with responsive premium UI and image-led content
-3. Disclosure page with mandatory information table and important documents list
-4. Contact form with backend integration
+3. Imported and structured document content across all core pages (Home/About/Academics/Activities/Disclosure/Contact)
+4. Home hero updated with uploaded school building image and transparent overlay card as requested
+5. Disclosure page updated with safety-policy-focused mandatory information and important policy documents
+6. Contact form updated to admission enquiry structure (student + guardian + grade + transport + remarks) with backend integration
 5. Backend APIs:
    - POST /api/contact-messages
    - GET /api/contact-messages
-6. Toast-based user feedback on successful/failed form submission
-7. Extensive `data-testid` coverage for key interactive and user-facing elements
-8. Validation/testing completed:
+7. Backend model extended to persist additional admission fields in MongoDB
+8. Toast-based user feedback on successful/failed form submission
+9. Extensive `data-testid` coverage for key interactive and user-facing elements
+10. Validation/testing completed:
    - curl API tests passed
    - browser flow screenshots captured
-   - testing agent suite passed (frontend + backend)
+   - testing agent suites passed (frontend + backend), including extended field regression tests
 
 ## Prioritized Backlog
 ### P0 (High Priority)
-- Connect disclosure document buttons to real uploaded document URLs/PDF files
-- Replace demo school disclosure values with exact official school data
+- Connect disclosure document buttons to real uploaded policy/document URLs/PDF files
+- Finalize official school contact and statutory details (phone/email/address, affiliations, codes)
 
 ### P1 (Medium Priority)
 - Add admin dashboard to review contact enquiries
@@ -57,6 +61,6 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Add SEO metadata + structured data for better search visibility
 
 ## Next Tasks
-1. Upload and map actual disclosure PDF files
-2. Add admin enquiry review view with filters
-3. Final content QA for all school details and contact info
+1. Upload and map actual disclosure policy PDFs for each listed policy
+2. Add admin enquiry review view with filters and export option
+3. Final content QA for all school details and official wording from management
