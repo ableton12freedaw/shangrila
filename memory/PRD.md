@@ -19,6 +19,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Follow-up request: update school address and phone number
 - Follow-up request: add Google Map widget in Contact Us using provided location URL
 - Follow-up request: add newly uploaded photos and add one-click Get Directions button for parents
+- Follow-up request: keep welcome message separated as its own section
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -62,6 +63,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 17. Updated school contact details globally: address and phone number reflected across contact and footer sections
 18. Added Google Map widget section in Contact Us with embedded map and "Open in Google Maps" link
 19. Added one-click "Get Directions" CTA in Contact map section and integrated 5 additional uploaded school photos into gallery
+20. Separated Home page welcome message into a dedicated standalone section/card
 
 ## Prioritized Backlog
 ### P0 (High Priority)

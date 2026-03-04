@@ -83,8 +83,18 @@ export const HomePage = () => {
             <p className="text-sm leading-8 text-slate-700 md:text-base" data-testid="home-intro-text">
               {homeIntro.text}
             </p>
-            <p className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm leading-8 text-slate-700" data-testid="home-welcome-message">
-              <span className="font-semibold text-primary">Welcome Message:</span> {welcomeMessage}
+          </CardContent>
+        </Card>
+      </PageSection>
+
+      <PageSection className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" testId="home-welcome-message-section">
+        <Card className="border-slate-200 bg-gradient-to-r from-white to-slate-50" data-testid="home-welcome-message-card">
+          <CardContent className="space-y-3 p-7">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-700" data-testid="home-welcome-label">
+              Welcome Message
+            </p>
+            <p className="text-sm leading-8 text-slate-700 md:text-base" data-testid="home-welcome-message">
+              {welcomeMessage}
             </p>
           </CardContent>
         </Card>
