@@ -30,6 +30,9 @@ const schoolMapUrl =
 const schoolMapEmbedUrl =
   "https://www.google.com/maps?q=21.1094895,78.9542558&z=17&output=embed";
 
+const schoolDirectionsUrl =
+  "https://www.google.com/maps/dir/?api=1&destination=21.1094895,78.9542558";
+
 export const ContactPage = () => {
   const [form, setForm] = useState(initialForm);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -222,15 +225,26 @@ export const ContactPage = () => {
               <h2 className="text-3xl font-bold text-slate-900" data-testid="contact-map-heading">
                 Find Us on Map
               </h2>
-              <a
-                href={schoolMapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
-                data-testid="contact-map-open-google-link"
-              >
-                Open in Google Maps
-              </a>
+              <div className="flex flex-wrap gap-2" data-testid="contact-map-actions">
+                <a
+                  href={schoolDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
+                  data-testid="contact-map-get-directions-link"
+                >
+                  Get Directions
+                </a>
+                <a
+                  href={schoolMapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                  data-testid="contact-map-open-google-link"
+                >
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
 
             <div className="overflow-hidden rounded-2xl border border-slate-200" data-testid="contact-map-embed-wrapper">

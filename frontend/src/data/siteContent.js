@@ -377,4 +377,29 @@ export const schoolLifeGallery = [
     category: "Classroom",
     image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/tfzwffed_1000047537.jpg",
   },
+  {
+    title: "Classroom Learning with Joy",
+    category: "Primary Academics",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/2b3m0yd7_1000047539.jpg",
+  },
+  {
+    title: "Science Lab Demonstration",
+    category: "Laboratory",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/ayoedlqx_1000047541.jpg",
+  },
+  {
+    title: "Creative Classroom Activity",
+    category: "Art & Expression",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/8dft5xml_1000047542.jpg",
+  },
+  {
+    title: "Collaborative Study Time",
+    category: "Student Engagement",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/idxo2pui_1000047543.jpg",
+  },
+  {
+    title: "Confident Learners in Class",
+    category: "Middle School",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/ockdhxsa_1000047544.jpg",
+  },
 ];
