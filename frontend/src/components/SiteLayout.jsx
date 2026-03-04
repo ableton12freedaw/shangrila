@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Facebook, Instagram, Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { navLinks, schoolIdentity } from "@/data/siteContent";
 
 export const SiteLayout = ({ children }) => {
@@ -20,6 +20,13 @@ export const SiteLayout = ({ children }) => {
       label: "Visit Shangrila School Instagram",
       icon: Instagram,
       hoverClass: "hover:border-[#E1306C] hover:text-[#E1306C]",
+    },
+    {
+      key: "linkedin",
+      href: "https://www.linkedin.com/company/shangrila-english-high-school-and-junior-college/",
+      label: "Visit Shangrila School LinkedIn",
+      icon: Linkedin,
+      hoverClass: "hover:border-[#0A66C2] hover:text-[#0A66C2]",
     },
   ];
 

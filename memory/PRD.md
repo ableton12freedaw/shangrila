@@ -86,6 +86,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 32. Removed Home hero CTA buttons ("Enquire Now" and "View Disclosure") as requested
 33. Updated leadership names: Principal → Mrs. Swati Damle, Manager → Ms. Shivali Satpute
 34. Updated opening hours and visitor timings across Contact + Footer with detailed schedule text
+35. Added LinkedIn social icon/link widget in header (desktop + mobile menu)
 
 ## Prioritized Backlog
 ### P0 (High Priority)
