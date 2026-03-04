@@ -1,6 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
+import { SEOHead } from "@/components/SEOHead";
 import {
   aboutPhilosophy,
   aboutVision,
@@ -15,8 +16,16 @@ const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const AboutPage = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="about-page-root">
-      <PageSection className="grid items-center gap-8 lg:grid-cols-2" testId="about-intro-section">
+    <>
+      <SEOHead
+        title="About Us | CBSE School in Hingna, Nagpur | Shangrila School"
+        description="Learn about Shangrila English High School's vision, values, campus infrastructure, and trusted academic journey in Hingna, Nagpur."
+        keywords="about shangrila school, cbse school in hingna nagpur, best school in nagpur"
+        path="/about-us"
+      />
+
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="about-page-root">
+        <PageSection className="grid items-center gap-8 lg:grid-cols-2" testId="about-intro-section">
         <div className="space-y-4" data-testid="about-content-column">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-700" data-testid="about-page-label">About Us</p>
           <h1 className="text-4xl font-black text-slate-900 sm:text-5xl" data-testid="about-main-heading">
@@ -38,7 +47,7 @@ export const AboutPage = () => {
         </div>
       </PageSection>
 
-      <PageSection className="mt-12 grid gap-6 md:grid-cols-2" testId="about-mission-vision-section">
+        <PageSection className="mt-12 grid gap-6 md:grid-cols-2" testId="about-mission-vision-section">
         <Card className="border-slate-200 bg-white/95" data-testid="about-mission-card">
           <CardContent className="space-y-3 p-7">
             <h2 className="text-3xl font-bold text-primary" data-testid="about-mission-heading">Philosophy of Education</h2>
@@ -62,7 +71,7 @@ export const AboutPage = () => {
         </Card>
       </PageSection>
 
-      <PageSection className="mt-12" testId="about-values-section">
+        <PageSection className="mt-12" testId="about-values-section">
         <Card className="border-slate-200 bg-gradient-to-r from-white to-slate-50" data-testid="about-values-card">
           <CardContent className="p-7">
             <h3 className="text-3xl font-bold text-slate-900" data-testid="about-values-heading">Core Values</h3>
@@ -78,7 +87,7 @@ export const AboutPage = () => {
         </Card>
       </PageSection>
 
-      <PageSection className="mt-12 grid gap-6 lg:grid-cols-2" testId="about-history-and-why-section">
+        <PageSection className="mt-12 grid gap-6 lg:grid-cols-2" testId="about-history-and-why-section">
         <Card className="border-slate-200 bg-white" data-testid="about-milestones-card">
           <CardContent className="space-y-3 p-7">
             <h3 className="text-3xl font-bold text-slate-900" data-testid="about-milestones-heading">History & Milestones</h3>
@@ -104,7 +113,8 @@ export const AboutPage = () => {
             </ul>
           </CardContent>
         </Card>
-      </PageSection>
-    </div>
+        </PageSection>
+      </div>
+    </>
   );
 };

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
+import { SEOHead } from "@/components/SEOHead";
 import { academicStaff, academicsPrograms, academicsSections, imageAssets } from "@/data/siteContent";
 
 const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -15,7 +16,15 @@ const academicCalendar = [
 
 export const AcademicsPage = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="academics-page-root">
+    <>
+      <SEOHead
+        title="Academics | CBSE School in Nagpur | Shangrila School"
+        description="Explore CBSE curriculum, teaching methodology, academic calendar, and qualified staff at Shangrila English High School, Nagpur."
+        keywords="cbse school in nagpur, academics in shangrila school, school admissions in nagpur"
+        path="/academics"
+      />
+
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="academics-page-root">
       <PageSection className="grid gap-8 lg:grid-cols-[1.1fr_1fr]" testId="academics-hero-section">
         <div className="space-y-4" data-testid="academics-content-column">
           <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-700" data-testid="academics-page-label">Academics</p>
@@ -122,7 +131,7 @@ export const AcademicsPage = () => {
         </Card>
       </PageSection>
 
-      <PageSection className="mt-12" testId="academics-holistic-sections">
+        <PageSection className="mt-12" testId="academics-holistic-sections">
         <div className="grid gap-6 md:grid-cols-2" data-testid="academics-holistic-grid">
           {academicsSections.map((section) => (
             <Card key={section.title} className="border-slate-200 bg-slate-50" data-testid={`academics-section-card-${slugify(section.title)}`}>
@@ -141,7 +150,8 @@ export const AcademicsPage = () => {
             </Card>
           ))}
         </div>
-      </PageSection>
-    </div>
+        </PageSection>
+      </div>
+    </>
   );
 };

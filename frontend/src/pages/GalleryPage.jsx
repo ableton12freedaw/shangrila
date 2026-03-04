@@ -1,12 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
+import { SEOHead } from "@/components/SEOHead";
 import { schoolLifeGallery } from "@/data/siteContent";
 
 const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const GalleryPage = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8" data-testid="gallery-page-root">
+    <>
+      <SEOHead
+        title="School Gallery | CBSE School in Hingna, Nagpur | Shangrila"
+        description="View real campus moments from academics, sports, and student life at Shangrila English High School & Junior College, Nagpur."
+        keywords="school gallery nagpur, cbse school in hingna, best school in nagpur"
+        path="/gallery"
+      />
+
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8" data-testid="gallery-page-root">
       <PageSection className="space-y-4" testId="gallery-header-section">
         <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-700" data-testid="gallery-page-label">
           School Life Gallery
@@ -54,6 +63,7 @@ export const GalleryPage = () => {
           ))}
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };

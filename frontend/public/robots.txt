@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://school-connect-in-1.preview.emergentagent.com/sitemap.xml

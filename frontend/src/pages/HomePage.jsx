@@ -2,6 +2,7 @@ import { Award, BookOpen, Quote, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
+import { SEOHead } from "@/components/SEOHead";
 import {
   homeHighlights,
   homeIntro,
@@ -15,8 +16,36 @@ import {
 const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const HomePage = () => {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "School",
+    name: schoolIdentity.name,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: schoolIdentity.address,
+      addressLocality: "Nagpur",
+      addressRegion: "Maharashtra",
+      addressCountry: "IN",
+    },
+    telephone: schoolIdentity.phone,
+    email: schoolIdentity.email,
+    sameAs: [
+      "https://www.facebook.com/people/Shangrila-English-High-School/61558656637849/",
+      "https://www.instagram.com/shangrilaenglishschool/?hl=en",
+      "https://www.linkedin.com/company/shangrila-english-high-school-and-junior-college/",
+    ],
+  };
+
   return (
     <>
+      <SEOHead
+        title="Best School in Nagpur | THE SHANGRILA ENGLISH HIGH SCHOOL & JUNIOR COLLEGE"
+        description="Looking for the best school in Nagpur? Shangrila English High School offers CBSE-focused learning, holistic activities, and admissions support in Hingna, Nagpur."
+        keywords="best school in nagpur, cbse school in hingna, cbse school in nagpur, school admissions in nagpur, shangrila english high school"
+        path="/"
+        schema={homeSchema}
+      />
+
       <section className="relative overflow-hidden" data-testid="home-hero-section">
         <div className="absolute inset-0">
           <img

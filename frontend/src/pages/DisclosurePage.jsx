@@ -2,13 +2,22 @@ import { Download, ExternalLink, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageSection } from "@/components/PageSection";
+import { SEOHead } from "@/components/SEOHead";
 import { disclosureDocuments, disclosureInfo, safetyPolicies } from "@/data/siteContent";
 
 const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const DisclosurePage = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="disclosure-page-root">
+    <>
+      <SEOHead
+        title="Mandatory Disclosure & Documents | Shangrila School Nagpur"
+        description="Access school disclosure details, safety policies, and mandatory documents from Shangrila English High School, Nagpur."
+        keywords="school disclosure nagpur, cbse school documents, school admissions in nagpur"
+        path="/disclosure"
+      />
+
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="disclosure-page-root">
       <PageSection className="space-y-4" testId="disclosure-header-section">
         <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-700" data-testid="disclosure-page-label">Disclosure</p>
         <h1 className="text-4xl font-black text-slate-900 sm:text-5xl" data-testid="disclosure-main-heading">
@@ -89,7 +98,7 @@ export const DisclosurePage = () => {
         </Card>
       </PageSection>
 
-      <PageSection className="mt-12" testId="disclosure-policies-section">
+        <PageSection className="mt-12" testId="disclosure-policies-section">
         <div className="mb-6">
           <h2 className="text-3xl font-bold text-slate-900 md:text-5xl" data-testid="disclosure-policies-heading">
             Safety Policies
@@ -109,7 +118,8 @@ export const DisclosurePage = () => {
             </Card>
           ))}
         </div>
-      </PageSection>
-    </div>
+        </PageSection>
+      </div>
+    </>
   );
 };

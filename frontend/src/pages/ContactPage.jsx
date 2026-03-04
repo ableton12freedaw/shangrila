@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/sonner";
 import { PageSection } from "@/components/PageSection";
+import { SEOHead } from "@/components/SEOHead";
 import { schoolIdentity } from "@/data/siteContent";
 import { submitContactMessage } from "@/services/api";
 
@@ -59,7 +60,15 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="contact-page-root">
+    <>
+      <SEOHead
+        title="School Admissions in Nagpur | Contact Shangrila School"
+        description="Contact Shangrila English High School for school admissions in Nagpur. Get opening hours, visitor timings, enquiry form, and map directions."
+        keywords="school admissions in nagpur, best school in nagpur, cbse school in hingna, contact shangrila school"
+        path="/contact-us"
+      />
+
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="contact-page-root">
       <PageSection className="mb-10 space-y-4" testId="contact-header-section">
         <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-700" data-testid="contact-page-label">Contact Us</p>
         <h1 className="text-4xl font-black text-slate-900 sm:text-5xl" data-testid="contact-main-heading">Admission Enquiry Form</h1>
@@ -223,7 +232,7 @@ export const ContactPage = () => {
         </Card>
       </PageSection>
 
-      <PageSection className="mt-12" testId="contact-map-section">
+        <PageSection className="mt-12" testId="contact-map-section">
         <Card className="overflow-hidden border-slate-200 bg-white" data-testid="contact-map-card">
           <CardContent className="space-y-4 p-7">
             <div className="flex flex-wrap items-center justify-between gap-3" data-testid="contact-map-header-row">
@@ -266,7 +275,8 @@ export const ContactPage = () => {
             </div>
           </CardContent>
         </Card>
-      </PageSection>
-    </div>
+        </PageSection>
+      </div>
+    </>
   );
 };

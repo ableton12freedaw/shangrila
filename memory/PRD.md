@@ -92,6 +92,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 38. Added warm-tone tuning + responsive overlay intensity (mobile darker, desktop balanced) for consistent hero readability
 39. Rolled back the latest warm-tone/overlay-intensity pass to restore previous hero balance
 40. Rolled back all hero contrast enhancements to restore the original hero styling
+41. Implemented SEO optimization: per-page metadata/titles/canonicals, JSON-LD schema, robots.txt, sitemap.xml, and keyword targeting for Nagpur/CBSE/admissions intent
 
 ## Prioritized Backlog
 ### P0 (High Priority)

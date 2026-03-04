@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
+import { SEOHead } from "@/components/SEOHead";
 import {
   achievementsSections,
   activitiesList,
@@ -11,7 +12,15 @@ const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const ActivitiesPage = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="activities-page-root">
+    <>
+      <SEOHead
+        title="Activities & Achievements | Best School in Nagpur | Shangrila"
+        description="Discover co-curricular programs, sports, competitions, and student achievements at Shangrila English High School in Nagpur."
+        keywords="school activities in nagpur, best school in nagpur, student achievements nagpur school"
+        path="/activities"
+      />
+
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="activities-page-root">
       <PageSection className="grid gap-8 lg:grid-cols-[1fr_1.1fr]" testId="activities-hero-section">
         <div className="overflow-hidden rounded-3xl border border-slate-200 p-2" data-testid="activities-main-image-wrapper">
           <img
@@ -89,7 +98,7 @@ export const ActivitiesPage = () => {
         </div>
       </PageSection>
 
-      <PageSection className="mt-12" testId="activities-campus-image-section">
+        <PageSection className="mt-12" testId="activities-campus-image-section">
         <div className="overflow-hidden rounded-3xl border border-slate-200 p-2" data-testid="activities-campus-image-wrapper">
           <img
             src={imageAssets.campusGreen}
@@ -99,7 +108,8 @@ export const ActivitiesPage = () => {
             data-testid="activities-campus-image"
           />
         </div>
-      </PageSection>
-    </div>
+        </PageSection>
+      </div>
+    </>
   );
 };
