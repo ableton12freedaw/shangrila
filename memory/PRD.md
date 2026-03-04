@@ -24,6 +24,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Follow-up request: import teacher/staff details as staff cards in Academics below curriculum
 - Follow-up request: remove non-teaching staff from Academics staff cards
 - Follow-up request: remove "Made with Emergent" badge from website view
+- Follow-up request: final clean branding pass for title/meta/favicon and school short-name in browser title
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -72,6 +73,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 22. Imported teacher/staff details from uploaded document and added Staff Cards section in Academics below curriculum
 23. Removed non-teaching roles from Academics cards and retained only teaching/academic-support staff
 24. Removed/hid "Made with Emergent" badge from frontend output for cleaner branding
+25. Completed branding pass in public HTML: updated browser title with short-name, SEO/meta tags, OG/Twitter tags, and favicon labels
 
 ## Prioritized Backlog
 ### P0 (High Priority)
