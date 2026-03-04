@@ -32,28 +32,28 @@ export const HomePage = () => {
           <div className="grain-overlay" />
         </div>
 
-        <div className="relative mx-auto flex min-h-[80vh] max-w-7xl items-end px-4 pb-16 pt-32 sm:px-6 lg:px-8">
+        <div className="relative mx-auto flex min-h-[72vh] max-w-7xl items-end px-4 pb-10 pt-24 sm:min-h-[80vh] sm:px-6 sm:pb-16 sm:pt-32 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl rounded-3xl border border-white/30 bg-white/10 p-6 backdrop-blur-md sm:p-10"
+            className="max-w-4xl rounded-3xl border border-white/30 bg-white/10 p-5 backdrop-blur-md sm:p-10"
             data-testid="home-hero-content"
           >
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-amber-100" data-testid="home-school-label">
               Since 2001 · 25+ Years of Excellence
             </p>
-            <h1 className="text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl" data-testid="home-main-heading">
+            <h1 className="text-3xl font-black leading-tight text-white sm:text-5xl lg:text-6xl" data-testid="home-main-heading">
               {schoolIdentity.name}
             </h1>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-white/90 sm:text-lg" data-testid="home-tagline-text">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/90 sm:text-lg sm:leading-8" data-testid="home-tagline-text">
               {schoolIdentity.tagline}
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild className="premium-shine h-11 rounded-full px-8 text-sm font-semibold" data-testid="home-cta-contact-button">
+            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+              <Button asChild className="premium-shine h-11 w-full rounded-full px-8 text-sm font-semibold sm:w-auto" data-testid="home-cta-contact-button">
                 <Link to="/contact-us">Enquire Now</Link>
               </Button>
-              <Button asChild variant="outline" className="h-11 rounded-full border-white/80 bg-white/10 px-8 text-sm font-semibold text-white hover:bg-white/20" data-testid="home-cta-disclosure-button">
+              <Button asChild variant="outline" className="h-11 w-full rounded-full border-white/80 bg-white/10 px-8 text-sm font-semibold text-white hover:bg-white/20 sm:w-auto" data-testid="home-cta-disclosure-button">
                 <Link to="/disclosure">View Disclosure</Link>
               </Button>
             </div>

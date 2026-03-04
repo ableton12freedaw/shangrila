@@ -22,16 +22,18 @@ export const DisclosurePage = () => {
       <PageSection className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_1fr]" testId="disclosure-content-grid">
         <Card className="border-slate-200 bg-white" data-testid="disclosure-info-card">
           <CardContent className="p-0">
-            <table className="w-full" data-testid="disclosure-info-table">
-              <tbody>
-                {disclosureInfo.map((row) => (
-                  <tr key={row.key} className="border-b border-slate-100">
-                    <td className="w-1/2 px-5 py-4 text-sm font-semibold text-slate-800" data-testid={`disclosure-info-key-${row.key.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{row.key}</td>
-                    <td className="px-5 py-4 text-sm text-slate-600" data-testid={`disclosure-info-value-${row.key.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{row.value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="overflow-x-auto" data-testid="disclosure-info-table-wrapper">
+              <table className="w-full min-w-[560px]" data-testid="disclosure-info-table">
+                <tbody>
+                  {disclosureInfo.map((row) => (
+                    <tr key={row.key} className="border-b border-slate-100">
+                      <td className="w-1/2 px-5 py-4 text-sm font-semibold text-slate-800" data-testid={`disclosure-info-key-${row.key.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{row.key}</td>
+                      <td className="px-5 py-4 text-sm text-slate-600" data-testid={`disclosure-info-value-${row.key.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{row.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </CardContent>
         </Card>
 

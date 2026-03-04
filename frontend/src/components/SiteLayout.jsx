@@ -1,39 +1,95 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { navLinks, schoolIdentity } from "@/data/siteContent";
 
 export const SiteLayout = ({ children }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const socialLinks = [
+    {
+      key: "facebook",
+      href: "https://www.facebook.com/people/Shangrila-English-High-School/61558656637849/",
+      label: "Visit Shangrila School Facebook",
+      icon: Facebook,
+      hoverClass: "hover:border-[#1877F2] hover:text-[#1877F2]",
+    },
+    {
+      key: "instagram",
+      href: "https://www.instagram.com/shangrilaenglishschool/?hl=en",
+      label: "Visit Shangrila School Instagram",
+      icon: Instagram,
+      hoverClass: "hover:border-[#E1306C] hover:text-[#E1306C]",
+    },
+  ];
+
+  const socialBaseClass = "rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors";
+
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_#f1f5f9,_#fdfbf7_55%)] text-slate-900">
       <header
         className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/85 backdrop-blur-xl"
         data-testid="school-main-header"
       >
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 lg:px-8">
-          <NavLink
-            to="/"
-            className="flex items-center gap-3"
-            data-testid="school-logo-home-link"
-          >
-            <img
-              src={schoolIdentity.logo}
-              alt="Shangrila school logo"
-              className="school-logo-premium h-12 w-12 rounded-full border border-slate-200 object-cover md:h-14 md:w-14"
-              loading="lazy"
-              data-testid="school-site-logo-image"
-            />
-            <span className="flex flex-col">
-              <span className="text-lg font-black tracking-wide text-primary md:text-xl">
-                {schoolIdentity.name}
+        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-3">
+            <NavLink
+              to="/"
+              className="flex min-w-0 items-center gap-2 sm:gap-3"
+              data-testid="school-logo-home-link"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <img
+                src={schoolIdentity.logo}
+                alt="Shangrila school logo"
+                className="school-logo-premium h-10 w-10 rounded-full border border-slate-200 object-cover sm:h-12 sm:w-12 md:h-14 md:w-14"
+                loading="lazy"
+                data-testid="school-site-logo-image"
+              />
+              <span className="flex min-w-0 flex-col">
+                <span className="truncate text-sm font-black tracking-wide text-primary sm:text-base md:text-xl">
+                  {schoolIdentity.name}
+                </span>
+                <span className="truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-700 sm:text-xs">
+                  {schoolIdentity.tagline}
+                </span>
               </span>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
-                {schoolIdentity.tagline}
-              </span>
-            </span>
-          </NavLink>
+            </NavLink>
+
+            <div className="flex items-center gap-2">
+              <div className="hidden items-center gap-2 md:flex" data-testid="header-social-links">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.key}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${socialBaseClass} ${social.hoverClass}`}
+                      data-testid={`header-${social.key}-link`}
+                      aria-label={social.label}
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  );
+                })}
+              </div>
+
+              <button
+                type="button"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 md:hidden"
+                onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                data-testid="mobile-menu-toggle-button"
+                aria-label="Toggle mobile menu"
+              >
+                {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </button>
+            </div>
+          </div>
 
           <nav
-            className="flex w-full flex-nowrap items-center gap-1 overflow-x-auto rounded-full border border-slate-200 bg-white/70 p-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:w-auto sm:overflow-visible"
+            className="mt-3 hidden flex-nowrap items-center gap-1 overflow-x-auto rounded-full border border-slate-200 bg-white/70 p-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:flex"
             data-testid="school-main-navigation"
           >
             {navLinks.map((item) => (
@@ -54,28 +110,48 @@ export const SiteLayout = ({ children }) => {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2" data-testid="header-social-links">
-            <a
-              href="https://www.facebook.com/people/Shangrila-English-High-School/61558656637849/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-[#1877F2] hover:text-[#1877F2]"
-              data-testid="header-facebook-link"
-              aria-label="Visit Shangrila School Facebook"
-            >
-              <Facebook className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.instagram.com/shangrilaenglishschool/?hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-[#E1306C] hover:text-[#E1306C]"
-              data-testid="header-instagram-link"
-              aria-label="Visit Shangrila School Instagram"
-            >
-              <Instagram className="h-4 w-4" />
-            </a>
-          </div>
+          {isMobileMenuOpen && (
+            <div className="mt-3 space-y-3 rounded-2xl border border-slate-200 bg-white p-3 md:hidden" data-testid="mobile-navigation-panel">
+              <nav className="grid grid-cols-2 gap-2" data-testid="school-main-navigation-mobile">
+                {navLinks.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    data-testid={`nav-link-mobile-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
+                    className={({ isActive }) =>
+                      `rounded-xl px-3 py-2 text-center text-xs font-semibold tracking-wide transition-colors ${
+                        isActive
+                          ? "bg-primary text-white"
+                          : "bg-slate-50 text-slate-700 hover:bg-slate-100"
+                      }`
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </nav>
+
+              <div className="flex items-center gap-2" data-testid="header-social-links-mobile">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={`mobile-${social.key}`}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${socialBaseClass} ${social.hoverClass}`}
+                      data-testid={`header-${social.key}-link-mobile`}
+                      aria-label={social.label}
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
@@ -92,7 +168,7 @@ export const SiteLayout = ({ children }) => {
                 loading="lazy"
                 data-testid="footer-school-logo-image"
               />
-              <h3 className="text-2xl font-bold text-white">{schoolIdentity.name}</h3>
+              <h3 className="break-words text-lg font-bold text-white sm:text-2xl">{schoolIdentity.name}</h3>
             </div>
             <p className="text-sm leading-7 text-slate-300" data-testid="footer-school-tagline">
               {schoolIdentity.tagline}
