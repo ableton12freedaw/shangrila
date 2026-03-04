@@ -22,11 +22,11 @@ export const HomePage = () => {
           <img
             src={imageAssets.hero}
             alt="Shangrila English High School campus building"
-            className="h-full w-full object-cover object-center brightness-110"
+            className="h-full w-full object-cover object-center brightness-110 saturate-110 sepia-[0.08]"
             loading="lazy"
             data-testid="home-hero-image"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#040a1d]/88 via-[#0c1a43]/52 to-[#fdfbf7]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#281508]/88 via-[#0f1d48]/62 to-[#fdfbf7] sm:from-[#281508]/80 sm:via-[#0f1d48]/52" />
           <div className="grain-overlay" />
         </div>
 
@@ -35,7 +35,7 @@ export const HomePage = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl rounded-3xl border border-white/40 bg-slate-900/42 p-5 backdrop-blur-md sm:p-10"
+            className="max-w-4xl rounded-3xl border border-white/40 bg-slate-900/50 p-5 backdrop-blur-md sm:bg-slate-900/42 sm:p-10"
             data-testid="home-hero-content"
           >
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-amber-100 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]" data-testid="home-school-label">
