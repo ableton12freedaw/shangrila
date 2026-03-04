@@ -4,6 +4,15 @@ import { academicsPrograms, academicsSections, imageAssets } from "@/data/siteCo
 
 const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
+const academicCalendar = [
+  { period: "June", activity: "Session Reopens & Orientation Program" },
+  { period: "July - August", activity: "Regular Classes, Unit Test 1, Club Activities" },
+  { period: "September - October", activity: "Term I Revision & Mid-Term Assessments" },
+  { period: "November - December", activity: "Projects, Cultural Events, and Sports Engagement" },
+  { period: "January - February", activity: "Term II Learning Cycle, Practical Work, and Revision" },
+  { period: "March - April", activity: "Final Assessments, Result Processing, Session Closure" },
+];
+
 export const AcademicsPage = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="academics-page-root">
@@ -18,7 +27,7 @@ export const AcademicsPage = () => {
             and value education to prepare students for examinations, life, and future careers.
           </p>
           <p className="text-sm font-semibold text-slate-700" data-testid="academics-calendar-note">
-            Academic Calendar: will provide soon · Exam Timetable: will provide soon
+            Academic Calendar for the current session is shared below.
           </p>
         </div>
 
@@ -49,6 +58,32 @@ export const AcademicsPage = () => {
             </Card>
           ))}
         </div>
+      </PageSection>
+
+      <PageSection className="mt-12" testId="academics-calendar-section">
+        <Card className="border-slate-200 bg-white" data-testid="academics-calendar-card">
+          <CardContent className="space-y-4 p-7">
+            <h3 className="text-3xl font-bold text-slate-900" data-testid="academics-calendar-heading">
+              Academic Calendar
+            </h3>
+            <div className="grid gap-3 md:grid-cols-2" data-testid="academics-calendar-grid">
+              {academicCalendar.map((item) => (
+                <div
+                  key={item.period}
+                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3"
+                  data-testid={`academics-calendar-item-${slugify(item.period)}`}
+                >
+                  <p className="text-sm font-bold text-primary" data-testid={`academics-calendar-period-${slugify(item.period)}`}>
+                    {item.period}
+                  </p>
+                  <p className="mt-1 text-sm leading-7 text-slate-700" data-testid={`academics-calendar-activity-${slugify(item.period)}`}>
+                    {item.activity}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </PageSection>
 
       <PageSection className="mt-12" testId="academics-holistic-sections">
