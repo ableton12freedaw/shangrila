@@ -19,10 +19,10 @@ export const DisclosurePage = () => {
         </p>
       </PageSection>
 
-      <PageSection className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_1fr]" testId="disclosure-content-grid">
-        <Card className="border-slate-200 bg-white" data-testid="disclosure-info-card">
-          <CardContent className="p-0">
-            <div className="overflow-x-auto" data-testid="disclosure-info-table-wrapper">
+      <PageSection className="mt-10 grid min-w-0 gap-8 lg:grid-cols-[1.1fr_1fr]" testId="disclosure-content-grid">
+        <Card className="min-w-0 w-full border-slate-200 bg-white" data-testid="disclosure-info-card">
+          <CardContent className="min-w-0 p-0">
+            <div className="w-full max-w-full overflow-x-auto" data-testid="disclosure-info-table-wrapper">
               <table className="w-full min-w-[560px]" data-testid="disclosure-info-table">
                 <tbody>
                   {disclosureInfo.map((row) => (
@@ -37,7 +37,7 @@ export const DisclosurePage = () => {
           </CardContent>
         </Card>
 
-        <Card className="border-slate-200 bg-slate-50" data-testid="disclosure-documents-card">
+        <Card className="min-w-0 w-full border-slate-200 bg-slate-50" data-testid="disclosure-documents-card">
           <CardContent className="space-y-4 p-6">
             <h2 className="text-3xl font-bold text-slate-900" data-testid="disclosure-documents-heading">Important Documents</h2>
             {disclosureDocuments.map((doc) => (

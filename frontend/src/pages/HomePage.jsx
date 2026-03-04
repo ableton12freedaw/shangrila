@@ -53,7 +53,7 @@ export const HomePage = () => {
               <Button asChild className="premium-shine h-11 w-full rounded-full px-8 text-sm font-semibold sm:w-auto" data-testid="home-cta-contact-button">
                 <Link to="/contact-us">Enquire Now</Link>
               </Button>
-              <Button asChild variant="outline" className="h-11 w-full rounded-full border-white/80 bg-white/10 px-8 text-sm font-semibold text-white hover:bg-white/20 sm:w-auto" data-testid="home-cta-disclosure-button">
+              <Button asChild variant="outline" className="h-11 w-full rounded-full border-white/90 bg-[#0f1f4f]/75 px-8 text-sm font-semibold text-white hover:bg-[#0f1f4f]/90 sm:w-auto" data-testid="home-cta-disclosure-button">
                 <Link to="/disclosure">View Disclosure</Link>
               </Button>
             </div>

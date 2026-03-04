@@ -82,6 +82,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 28. Made gallery photos tappable/clickable to open in a new tab, with visible "Tap to open" cue for mobile users
 29. Rolled back tap-to-open gallery interaction changes as per user request
 30. Implemented alternate mobile/performance fix without behavior change: responsive spacing tune, prioritized image loading for first gallery items, and ensured gallery grid renders immediately (no hidden on-scroll animation)
+31. Full-site mobile-friendly pass: responsive header with hamburger menu, scalable hero typography/buttons, disclosure overflow containment, and improved mobile readability/navigation across all pages
 
 ## Prioritized Backlog
 ### P0 (High Priority)
