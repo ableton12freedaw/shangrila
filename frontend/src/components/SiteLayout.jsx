@@ -9,7 +9,7 @@ export const SiteLayout = ({ children }) => {
         className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/85 backdrop-blur-xl"
         data-testid="school-main-header"
       >
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 lg:px-8">
           <NavLink
             to="/"
             className="flex items-center gap-3"
@@ -33,7 +33,7 @@ export const SiteLayout = ({ children }) => {
           </NavLink>
 
           <nav
-            className="flex flex-wrap items-center gap-1 rounded-full border border-slate-200 bg-white/70 p-1"
+            className="flex w-full flex-nowrap items-center gap-1 overflow-x-auto rounded-full border border-slate-200 bg-white/70 p-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:w-auto sm:overflow-visible"
             data-testid="school-main-navigation"
           >
             {navLinks.map((item) => (
@@ -59,7 +59,7 @@ export const SiteLayout = ({ children }) => {
               href="https://www.facebook.com/people/Shangrila-English-High-School/61558656637849/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-primary hover:text-primary"
+              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-[#1877F2] hover:text-[#1877F2]"
               data-testid="header-facebook-link"
               aria-label="Visit Shangrila School Facebook"
             >
@@ -69,7 +69,7 @@ export const SiteLayout = ({ children }) => {
               href="https://www.instagram.com/shangrilaenglishschool/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-primary hover:text-primary"
+              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-[#E1306C] hover:text-[#E1306C]"
               data-testid="header-instagram-link"
               aria-label="Visit Shangrila School Instagram"
             >

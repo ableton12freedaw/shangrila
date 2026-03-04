@@ -26,6 +26,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Follow-up request: remove "Made with Emergent" badge from website view
 - Follow-up request: final clean branding pass for title/meta/favicon and school short-name in browser title
 - Follow-up request: add Facebook and Instagram icons/links in header
+- Follow-up request: apply official brand hover colors to social icons and improve mobile gallery visibility
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -76,6 +77,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 24. Removed/hid "Made with Emergent" badge from frontend output for cleaner branding
 25. Completed branding pass in public HTML: updated browser title with short-name, SEO/meta tags, OG/Twitter tags, and favicon labels
 26. Added Facebook and Instagram header icons linked to official school social pages
+27. Applied platform-brand hover colors (Facebook blue, Instagram pink) and improved responsive gallery image rendering for mobile usability
 
 ## Prioritized Backlog
 ### P0 (High Priority)

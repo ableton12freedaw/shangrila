@@ -21,15 +21,16 @@ export const GalleryPage = () => {
       </PageSection>
 
       <PageSection className="mt-10" testId="gallery-grid-section">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-testid="gallery-photo-grid">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3" data-testid="gallery-photo-grid">
           {schoolLifeGallery.map((item) => (
-            <Card key={item.title} className="overflow-hidden border-slate-200 bg-white" data-testid={`gallery-card-${slugify(item.title)}`}>
-              <div className="aspect-[4/5] w-full overflow-hidden" data-testid={`gallery-frame-${slugify(item.title)}`}>
+            <Card key={item.title} className="mx-auto w-full max-w-md overflow-hidden border-slate-200 bg-white sm:max-w-none" data-testid={`gallery-card-${slugify(item.title)}`}>
+              <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100 sm:aspect-[4/5]" data-testid={`gallery-frame-${slugify(item.title)}`}>
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                  className="h-full w-full object-contain object-center transition-transform duration-300 sm:object-cover sm:hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                   data-testid={`gallery-photo-${slugify(item.title)}`}
                 />
               </div>
