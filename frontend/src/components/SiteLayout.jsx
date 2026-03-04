@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { navLinks, schoolIdentity } from "@/data/siteContent";
 
 export const SiteLayout = ({ children }) => {
@@ -53,6 +53,29 @@ export const SiteLayout = ({ children }) => {
               </NavLink>
             ))}
           </nav>
+
+          <div className="flex items-center gap-2" data-testid="header-social-links">
+            <a
+              href="https://www.facebook.com/people/Shangrila-English-High-School/61558656637849/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-primary hover:text-primary"
+              data-testid="header-facebook-link"
+              aria-label="Visit Shangrila School Facebook"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.instagram.com/shangrilaenglishschool/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition-colors hover:border-primary hover:text-primary"
+              data-testid="header-instagram-link"
+              aria-label="Visit Shangrila School Instagram"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </header>
 
