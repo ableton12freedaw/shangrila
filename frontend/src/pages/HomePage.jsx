@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Award, BookOpen, ShieldCheck } from "lucide-react";
+import { Award, BookOpen, Quote, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -61,6 +61,21 @@ export const HomePage = () => {
         </div>
       </section>
 
+      <PageSection className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8" testId="home-welcome-message-section">
+        <Card className="relative overflow-hidden border-amber-100 bg-white/95 shadow-sm" data-testid="home-welcome-message-card">
+          <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-b from-amber-500 to-primary" />
+          <CardContent className="space-y-4 p-7 pl-8 md:p-10 md:pl-12">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-700" data-testid="home-welcome-label">
+              Welcome Message
+            </p>
+            <Quote className="h-8 w-8 text-amber-500" data-testid="home-welcome-quote-icon" />
+            <blockquote className="text-base italic leading-8 text-slate-700 md:text-lg" data-testid="home-welcome-message">
+              “{welcomeMessage}”
+            </blockquote>
+          </CardContent>
+        </Card>
+      </PageSection>
+
       <PageSection className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" testId="home-quick-stats-section">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {quickStats.map((item) => (
@@ -82,19 +97,6 @@ export const HomePage = () => {
             </h2>
             <p className="text-sm leading-8 text-slate-700 md:text-base" data-testid="home-intro-text">
               {homeIntro.text}
-            </p>
-          </CardContent>
-        </Card>
-      </PageSection>
-
-      <PageSection className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" testId="home-welcome-message-section">
-        <Card className="border-slate-200 bg-gradient-to-r from-white to-slate-50" data-testid="home-welcome-message-card">
-          <CardContent className="space-y-3 p-7">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-700" data-testid="home-welcome-label">
-              Welcome Message
-            </p>
-            <p className="text-sm leading-8 text-slate-700 md:text-base" data-testid="home-welcome-message">
-              {welcomeMessage}
             </p>
           </CardContent>
         </Card>
