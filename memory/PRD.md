@@ -84,6 +84,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 30. Implemented alternate mobile/performance fix without behavior change: responsive spacing tune, prioritized image loading for first gallery items, and ensured gallery grid renders immediately (no hidden on-scroll animation)
 31. Full-site mobile-friendly pass: responsive header with hamburger menu, scalable hero typography/buttons, disclosure overflow containment, and improved mobile readability/navigation across all pages
 32. Removed Home hero CTA buttons ("Enquire Now" and "View Disclosure") as requested
+33. Updated leadership names: Principal → Mrs. Swati Damle, Manager → Ms. Shivali Satpute
 
 ## Prioritized Backlog
 ### P0 (High Priority)

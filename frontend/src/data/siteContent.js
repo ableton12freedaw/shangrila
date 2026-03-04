@@ -66,7 +66,7 @@ export const leadershipMessages = [
   },
   {
     role: "Manager",
-    name: "Mrs. Shivali Satpute",
+    name: "Ms. Shivali Satpute",
     summary:
       "Our child-centric approach provides a supportive environment for academic, social, and emotional growth with continuous innovation and strong values.",
   },
@@ -78,7 +78,7 @@ export const leadershipMessages = [
   },
   {
     role: "Principal",
-    name: "MRS. SWATI DAMLE",
+    name: "Mrs. Swati Damle",
     summary:
       "With dedicated faculty and balanced focus on academics, values, and co-curricular experiences, we nurture responsible, thoughtful, and lifelong learners.",
   },
