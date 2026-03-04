@@ -27,6 +27,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Follow-up request: final clean branding pass for title/meta/favicon and school short-name in browser title
 - Follow-up request: add Facebook and Instagram icons/links in header
 - Follow-up request: apply official brand hover colors to social icons and improve mobile gallery visibility
+- Follow-up request: fix gallery photos opening issue in mobile browsers
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -78,6 +79,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 25. Completed branding pass in public HTML: updated browser title with short-name, SEO/meta tags, OG/Twitter tags, and favicon labels
 26. Added Facebook and Instagram header icons linked to official school social pages
 27. Applied platform-brand hover colors (Facebook blue, Instagram pink) and improved responsive gallery image rendering for mobile usability
+28. Made gallery photos tappable/clickable to open in a new tab, with visible "Tap to open" cue for mobile users
 
 ## Prioritized Backlog
 ### P0 (High Priority)
