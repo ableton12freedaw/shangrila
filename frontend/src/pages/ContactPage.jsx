@@ -10,6 +10,13 @@ import { schoolIdentity } from "@/data/siteContent";
 import { submitContactMessage } from "@/services/api";
 
 const initialForm = {
+  student_name: "",
+  date_of_birth: "",
+  grade_standard: "",
+  academic_year: "",
+  parent_guardian_name: "",
+  residential_address: "",
+  transport_required: "No",
   name: "",
   email: "",
   phone: "",
@@ -46,9 +53,9 @@ export const ContactPage = () => {
     <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-testid="contact-page-root">
       <PageSection className="mb-10 space-y-4" testId="contact-header-section">
         <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-700" data-testid="contact-page-label">Contact Us</p>
-        <h1 className="text-4xl font-black text-slate-900 sm:text-5xl" data-testid="contact-main-heading">Connect with Admissions & School Office</h1>
+        <h1 className="text-4xl font-black text-slate-900 sm:text-5xl" data-testid="contact-main-heading">Admission Enquiry Form</h1>
         <p className="max-w-3xl text-base leading-8 text-slate-600 md:text-lg" data-testid="contact-intro-text">
-          Share your query and our team will reach out with complete details.
+          Please fill in the details below. Our admission team will contact you shortly.
         </p>
       </PageSection>
 
@@ -73,12 +80,57 @@ export const ContactPage = () => {
 
         <Card className="border-slate-200 bg-white" data-testid="contact-form-card">
           <CardContent className="p-7">
-            <form className="space-y-4" onSubmit={onSubmit} data-testid="contact-enquiry-form">
+            <form className="grid gap-4 md:grid-cols-2" onSubmit={onSubmit} data-testid="contact-enquiry-form">
+              <Input
+                name="student_name"
+                value={form.student_name}
+                onChange={onFieldChange}
+                placeholder="Student Name"
+                required
+                className="h-12"
+                data-testid="contact-form-student-name-input"
+              />
+              <Input
+                type="date"
+                name="date_of_birth"
+                value={form.date_of_birth}
+                onChange={onFieldChange}
+                required
+                className="h-12"
+                data-testid="contact-form-date-of-birth-input"
+              />
+              <Input
+                name="grade_standard"
+                value={form.grade_standard}
+                onChange={onFieldChange}
+                placeholder="Grade / Standard Applying For"
+                required
+                className="h-12"
+                data-testid="contact-form-grade-standard-input"
+              />
+              <Input
+                name="academic_year"
+                value={form.academic_year}
+                onChange={onFieldChange}
+                placeholder="Academic Year"
+                required
+                className="h-12"
+                data-testid="contact-form-academic-year-input"
+              />
+              <Input
+                name="parent_guardian_name"
+                value={form.parent_guardian_name}
+                onChange={onFieldChange}
+                placeholder="Parent / Guardian Name"
+                required
+                className="h-12"
+                data-testid="contact-form-parent-guardian-name-input"
+              />
               <Input
                 name="name"
                 value={form.name}
                 onChange={onFieldChange}
-                placeholder="Full Name"
+                placeholder="Contact Person Name"
                 required
                 className="h-12"
                 data-testid="contact-form-name-input"
@@ -103,6 +155,30 @@ export const ContactPage = () => {
                 data-testid="contact-form-phone-input"
               />
               <Input
+                name="residential_address"
+                value={form.residential_address}
+                onChange={onFieldChange}
+                placeholder="Residential Address"
+                required
+                className="h-12 md:col-span-2"
+                data-testid="contact-form-residential-address-input"
+              />
+              <label className="flex flex-col gap-2 md:col-span-2" data-testid="contact-form-transport-required-field">
+                <span className="text-sm font-semibold text-slate-700" data-testid="contact-form-transport-required-label">
+                  Transport Required?
+                </span>
+                <select
+                  name="transport_required"
+                  value={form.transport_required}
+                  onChange={onFieldChange}
+                  className="h-12 rounded-md border border-input bg-transparent px-3 text-sm text-slate-700"
+                  data-testid="contact-form-transport-required-select"
+                >
+                  <option value="Yes" data-testid="contact-form-transport-yes-option">Yes</option>
+                  <option value="No" data-testid="contact-form-transport-no-option">No</option>
+                </select>
+              </label>
+              <Input
                 name="subject"
                 value={form.subject}
                 onChange={onFieldChange}
@@ -115,13 +191,13 @@ export const ContactPage = () => {
                 name="message"
                 value={form.message}
                 onChange={onFieldChange}
-                placeholder="Write your message"
+                placeholder="Any Queries / Remarks"
                 required
-                className="min-h-32"
+                className="min-h-32 md:col-span-2"
                 data-testid="contact-form-message-input"
               />
               <Button
-                className="premium-shine h-12 w-full rounded-full text-sm font-semibold"
+                className="premium-shine h-12 w-full rounded-full text-sm font-semibold md:col-span-2"
                 type="submit"
                 disabled={isSubmitting}
                 data-testid="contact-form-submit-button"

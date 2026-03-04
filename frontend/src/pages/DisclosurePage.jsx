@@ -2,7 +2,9 @@ import { Download, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PageSection } from "@/components/PageSection";
-import { disclosureDocuments, disclosureInfo } from "@/data/siteContent";
+import { disclosureDocuments, disclosureInfo, safetyPolicies } from "@/data/siteContent";
+
+const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const DisclosurePage = () => {
   return (
@@ -13,7 +15,7 @@ export const DisclosurePage = () => {
           Mandatory School Information & Important Documents
         </h1>
         <p className="max-w-3xl text-base leading-8 text-slate-600 md:text-lg" data-testid="disclosure-intro-text">
-          Transparent reporting for parents and stakeholders. All key institutional details are listed below.
+          Student safety and transparency are top priorities. Below are key institutional details and policy disclosures.
         </p>
       </PageSection>
 
@@ -48,6 +50,7 @@ export const DisclosurePage = () => {
                 <Button
                   variant="outline"
                   size="sm"
+                  type="button"
                   className="h-9 rounded-full border-primary text-primary"
                   data-testid={`disclosure-document-download-${doc.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                 >
@@ -57,6 +60,28 @@ export const DisclosurePage = () => {
             ))}
           </CardContent>
         </Card>
+      </PageSection>
+
+      <PageSection className="mt-12" testId="disclosure-policies-section">
+        <div className="mb-6">
+          <h2 className="text-3xl font-bold text-slate-900 md:text-5xl" data-testid="disclosure-policies-heading">
+            Safety Policies
+          </h2>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2" data-testid="disclosure-policies-grid">
+          {safetyPolicies.map((policy) => (
+            <Card key={policy.title} className="border-slate-200 bg-white" data-testid={`disclosure-policy-card-${slugify(policy.title)}`}>
+              <CardContent className="space-y-2 p-6">
+                <h3 className="text-2xl font-bold text-primary" data-testid={`disclosure-policy-title-${slugify(policy.title)}`}>
+                  {policy.title}
+                </h3>
+                <p className="text-sm leading-7 text-slate-600" data-testid={`disclosure-policy-description-${slugify(policy.title)}`}>
+                  {policy.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </PageSection>
     </div>
   );

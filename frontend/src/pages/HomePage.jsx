@@ -4,7 +4,17 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
-import { homeHighlights, imageAssets, quickStats, schoolIdentity } from "@/data/siteContent";
+import {
+  homeHighlights,
+  homeIntro,
+  imageAssets,
+  leadershipMessages,
+  quickStats,
+  schoolIdentity,
+  welcomeMessage,
+} from "@/data/siteContent";
+
+const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const HomePage = () => {
   return (
@@ -13,12 +23,12 @@ export const HomePage = () => {
         <div className="absolute inset-0">
           <img
             src={imageAssets.hero}
-            alt="Happy students in school uniform"
+            alt="Shangrila English High School campus building"
             className="h-full w-full object-cover object-center"
             loading="lazy"
             data-testid="home-hero-image"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A8A]/70 via-[#1E3A8A]/45 to-[#fdfbf7]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#071230]/65 via-[#071230]/25 to-[#fdfbf7]" />
           <div className="grain-overlay" />
         </div>
 
@@ -27,23 +37,23 @@ export const HomePage = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl rounded-3xl border border-white/30 bg-white/75 p-6 backdrop-blur-xl sm:p-10"
+            className="max-w-4xl rounded-3xl border border-white/30 bg-white/10 p-6 backdrop-blur-md sm:p-10"
             data-testid="home-hero-content"
           >
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-amber-700" data-testid="home-school-label">
-              India · Premium School Campus
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-amber-100" data-testid="home-school-label">
+              Since 2001 · 25+ Years of Excellence
             </p>
-            <h1 className="text-4xl font-black leading-tight text-slate-900 sm:text-5xl lg:text-6xl" data-testid="home-main-heading">
+            <h1 className="text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl" data-testid="home-main-heading">
               {schoolIdentity.name}
             </h1>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg" data-testid="home-tagline-text">
+            <p className="mt-4 max-w-2xl text-base leading-8 text-white/90 sm:text-lg" data-testid="home-tagline-text">
               {schoolIdentity.tagline}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild className="premium-shine h-11 rounded-full px-8 text-sm font-semibold" data-testid="home-cta-contact-button">
                 <Link to="/contact-us">Enquire Now</Link>
               </Button>
-              <Button asChild variant="outline" className="h-11 rounded-full border-primary px-8 text-sm font-semibold text-primary" data-testid="home-cta-disclosure-button">
+              <Button asChild variant="outline" className="h-11 rounded-full border-white/80 bg-white/10 px-8 text-sm font-semibold text-white hover:bg-white/20" data-testid="home-cta-disclosure-button">
                 <Link to="/disclosure">View Disclosure</Link>
               </Button>
             </div>
@@ -64,11 +74,27 @@ export const HomePage = () => {
         </div>
       </PageSection>
 
+      <PageSection className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" testId="home-intro-section">
+        <Card className="border-slate-200 bg-white/95" data-testid="home-intro-card">
+          <CardContent className="space-y-4 p-7">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-5xl" data-testid="home-intro-heading">
+              {homeIntro.title}
+            </h2>
+            <p className="text-sm leading-8 text-slate-700 md:text-base" data-testid="home-intro-text">
+              {homeIntro.text}
+            </p>
+            <p className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm leading-8 text-slate-700" data-testid="home-welcome-message">
+              <span className="font-semibold text-primary">Welcome Message:</span> {welcomeMessage}
+            </p>
+          </CardContent>
+        </Card>
+      </PageSection>
+
       <PageSection className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" testId="home-highlights-section">
         <div className="mb-8 max-w-2xl">
-          <h2 className="text-3xl font-bold text-slate-900 md:text-5xl" data-testid="home-highlights-heading">Why Families Trust Us</h2>
+          <h2 className="text-3xl font-bold text-slate-900 md:text-5xl" data-testid="home-highlights-heading">Results, Activities & Achievements</h2>
           <p className="mt-3 text-base text-slate-600 md:text-lg" data-testid="home-highlights-description">
-            Purpose-driven academics, caring mentors, and a safe campus where students thrive.
+            A balanced school experience that combines academic depth, co-curricular growth, and value-based learning.
           </p>
         </div>
 
@@ -80,6 +106,35 @@ export const HomePage = () => {
                 <h3 className="text-2xl font-bold text-slate-900" data-testid={`home-highlight-title-${index + 1}`}>{homeHighlights[index].title}</h3>
                 <p className="text-sm leading-7 text-slate-600" data-testid={`home-highlight-description-${index + 1}`}>
                   {homeHighlights[index].description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </PageSection>
+
+      <PageSection className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" testId="home-leadership-section">
+        <div className="mb-8 max-w-3xl">
+          <h2 className="text-3xl font-bold text-slate-900 md:text-5xl" data-testid="home-leadership-heading">
+            Management & Leadership Messages
+          </h2>
+          <p className="mt-3 text-base text-slate-600 md:text-lg" data-testid="home-leadership-description">
+            Vision-led guidance from the leadership team that drives every learner’s growth and purpose.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-testid="home-leadership-grid">
+          {leadershipMessages.map((item) => (
+            <Card key={item.role} className="border-slate-200 bg-white" data-testid={`home-leadership-card-${slugify(item.role)}`}>
+              <CardContent className="space-y-2 p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700" data-testid={`home-leadership-role-${slugify(item.role)}`}>
+                  {item.role}
+                </p>
+                <h3 className="text-2xl font-bold text-primary" data-testid={`home-leadership-name-${slugify(item.role)}`}>
+                  {item.name}
+                </h3>
+                <p className="text-sm leading-7 text-slate-600" data-testid={`home-leadership-summary-${slugify(item.role)}`}>
+                  {item.summary}
                 </p>
               </CardContent>
             </Card>

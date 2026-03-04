@@ -16,10 +16,10 @@ export const SiteLayout = ({ children }) => {
             data-testid="school-logo-home-link"
           >
             <span className="text-lg font-black tracking-wide text-primary md:text-xl">
-              THE SHANGRILA ENGLISH HIGH SCHOOL
+              {schoolIdentity.name}
             </span>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
-              Educating the minds, reaching the hearts
+              {schoolIdentity.tagline}
             </span>
           </NavLink>
 

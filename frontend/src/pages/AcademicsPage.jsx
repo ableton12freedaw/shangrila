@@ -1,13 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
-import { academicsPrograms, imageAssets } from "@/data/siteContent";
+import { academicsPrograms, academicsSections, imageAssets } from "@/data/siteContent";
 
-const pedagogyPoints = [
-  "Activity-based learning and collaborative projects",
-  "Regular assessments with parent feedback cycles",
-  "Laboratory integration for STEM confidence",
-  "Career readiness and communication development",
-];
+const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export const AcademicsPage = () => {
   return (
@@ -16,11 +11,14 @@ export const AcademicsPage = () => {
         <div className="space-y-4" data-testid="academics-content-column">
           <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-700" data-testid="academics-page-label">Academics</p>
           <h1 className="text-4xl font-black text-slate-900 sm:text-5xl" data-testid="academics-main-heading">
-            Structured Learning for Excellence at Every Stage
+            CBSE Curriculum with Holistic Development
           </h1>
           <p className="text-base leading-8 text-slate-600 md:text-lg" data-testid="academics-intro-text">
-            Our curriculum blends conceptual clarity, practical exposure, and independent thinking.
-            Students are guided to become resilient problem-solvers and responsible citizens.
+            Our learner-centric academic approach integrates NCERT-based curriculum, experiential methods,
+            and value education to prepare students for examinations, life, and future careers.
+          </p>
+          <p className="text-sm font-semibold text-slate-700" data-testid="academics-calendar-note">
+            Academic Calendar: will provide soon · Exam Timetable: will provide soon
           </p>
         </div>
 
@@ -53,19 +51,25 @@ export const AcademicsPage = () => {
         </div>
       </PageSection>
 
-      <PageSection className="mt-12" testId="academics-pedagogy-section">
-        <Card className="border-slate-200 bg-slate-50" data-testid="academics-pedagogy-card">
-          <CardContent className="p-7">
-            <h3 className="text-3xl font-bold text-slate-900" data-testid="academics-pedagogy-heading">Our Pedagogy in Practice</h3>
-            <ul className="mt-5 grid gap-3 md:grid-cols-2" data-testid="academics-pedagogy-list">
-              {pedagogyPoints.map((point) => (
-                <li key={point} className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700" data-testid={`academics-pedagogy-item-${point.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+      <PageSection className="mt-12" testId="academics-holistic-sections">
+        <div className="grid gap-6 md:grid-cols-2" data-testid="academics-holistic-grid">
+          {academicsSections.map((section) => (
+            <Card key={section.title} className="border-slate-200 bg-slate-50" data-testid={`academics-section-card-${slugify(section.title)}`}>
+              <CardContent className="space-y-3 p-6">
+                <h3 className="text-2xl font-bold text-slate-900" data-testid={`academics-section-title-${slugify(section.title)}`}>
+                  {section.title}
+                </h3>
+                <ul className="space-y-2" data-testid={`academics-section-list-${slugify(section.title)}`}>
+                  {section.points.map((point) => (
+                    <li className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm leading-7 text-slate-700" key={point} data-testid={`academics-section-point-${slugify(point)}`}>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </PageSection>
     </div>
   );

@@ -1,7 +1,7 @@
 export const schoolIdentity = {
-  name: "THE SHANGRILA ENGLISH HIGH SCHOOL",
+  name: "THE SHANGRILA ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
   tagline: "EDUCATING THE MINDS, REACHING THE HEARTS",
-  address: "Shangrila Campus Road, Pune, Maharashtra, India",
+  address: "Hingna, Nagpur, Maharashtra, India",
   phone: "+91 98765 43210",
   email: "admissions@shangrilaschool.edu.in",
   workingHours: "Monday to Saturday · 8:00 AM to 4:00 PM",
@@ -17,92 +17,308 @@ export const navLinks = [
 ];
 
 export const quickStats = [
-  { label: "Students", value: "2,100+" },
-  { label: "Experienced Faculty", value: "120+" },
-  { label: "Board Results", value: "98%" },
-  { label: "Clubs & Societies", value: "25+" },
+  { label: "Established", value: "Since 2001" },
+  { label: "Years of Excellence", value: "25+" },
+  { label: "Campus Area", value: "13,800 sq.m" },
+  { label: "Playground", value: "9,000 sq.m" },
 ];
 
 export const homeHighlights = [
   {
-    title: "Future-Ready Classrooms",
+    title: "Academic Results",
     description:
-      "Smart boards, blended learning modules, and guided mentorship to build strong academic foundations.",
+      "Outstanding board and internal exam performance through continuous and child-centric learning practices.",
   },
   {
-    title: "Value-Based Education",
+    title: "Activities & Student Life",
     description:
-      "A culture rooted in empathy, respect, and discipline with equal focus on character and excellence.",
+      "Dance, music, drama, yoga, clubs, sports, and leadership opportunities that shape confident learners.",
   },
   {
-    title: "Safety & Well-Being",
+    title: "Achievements",
     description:
-      "Secure campus, trained counselors, and structured support systems for every learner.",
+      "State and national recognitions across academics, sports, Olympiads, and cultural events.",
   },
+];
+
+export const homeIntro = {
+  title: "A Legacy of Trust, Quality Education, and Holistic Development",
+  text: "Since 2001, Shangrila English High School & Junior College has been a symbol of trust, quality education, and holistic development. For over 25 years, we have consistently nurtured young minds with strong values, academic excellence, and a future-focused approach. Our journey reflects a legacy of dedication, growth, and commitment to shaping responsible and confident individuals.",
+};
+
+export const welcomeMessage =
+  "Welcome to Shangrila English High School & Junior College, where education goes beyond classrooms to shape character, values, and vision. Since 2001, we are committed to igniting young minds and nurturing responsible, future-ready individuals.";
+
+export const leadershipMessages = [
+  {
+    role: "Founder & Director",
+    name: "Mr. Nana Satpute",
+    summary:
+      "Education is a journey of awakening minds, building character, and inspiring purpose. Our vision goes beyond textbooks to cultivate curiosity, creativity, and confident thinking.",
+  },
+  {
+    role: "President",
+    name: "Mr. N. B. Bhange",
+    summary:
+      "We are committed to creating a transformative institution that nurtures discipline, innovation, and ethical leadership while preparing socially responsible and future-ready students.",
+  },
+  {
+    role: "Manager",
+    name: "Mrs. Shivali Satpute",
+    summary:
+      "Our child-centric approach provides a supportive environment for academic, social, and emotional growth with continuous innovation and strong values.",
+  },
+  {
+    role: "Co-Founder",
+    name: "Mrs. Manjusha Satpute",
+    summary:
+      "Every child has unique potential. We focus on academic excellence and holistic development through culture, sports, and co-curricular opportunities.",
+  },
+  {
+    role: "Principal",
+    name: "Principal",
+    summary:
+      "With dedicated faculty and balanced focus on academics, values, and co-curricular experiences, we nurture responsible, thoughtful, and lifelong learners.",
+  },
+];
+
+export const aboutVision =
+  "Education is a journey of igniting young minds and shaping responsible futures. We aspire to be a learner-centric institution where academic excellence, strong values, and innovative thinking go hand in hand. We empower students with knowledge, life skills, and character so they think independently, adapt confidently, and contribute positively to society.";
+
+export const aboutPhilosophy =
+  "Our philosophy emphasizes harmonious development of mind, heart, and character. True learning goes beyond marks to cultivate values, critical thinking, creativity, and emotional strength. Education is preparation for life, not just a career.";
+
+export const coreValues = [
+  "Excellence",
+  "Integrity",
+  "Respect",
+  "Responsibility",
+  "Innovation",
+  "Compassion",
+  "Lifelong Learning",
+];
+
+export const infrastructureOverview = [
+  { key: "Campus Size", value: "13,800 square meters" },
+  { key: "Academic Structure", value: "G+2" },
+  { key: "Built-up Area", value: "Approx. 4,800 square meters" },
+  { key: "Classrooms", value: "20 occupied classrooms + additional rooms" },
+  { key: "Playground Area", value: "About 9,000 square meters" },
+  { key: "Sports Facilities", value: "200-meter track, cricket ground, volleyball facilities" },
+  { key: "Academic Facilities", value: "Science lab, math lab, computer lab, library" },
+  { key: "Security", value: "CCTV surveillance with trained support staff" },
+];
+
+export const milestones = [
+  "Founded in 2001 with a vision for quality value-based education.",
+  "Expanded from primary classes to strong secondary education pathways.",
+  "Developed spacious campus with advanced academic and sports facilities.",
+  "Strengthened academic framework with modern and experiential teaching methods.",
+  "Built a trusted institution shaping confident and responsible students.",
+];
+
+export const whyChooseShangrila = [
+  "Legacy of trust since 2001",
+  "Holistic focus on academics, values, life skills, sports, and creativity",
+  "Qualified and dedicated faculty",
+  "Future-ready learning with critical thinking and innovation",
+  "Safe, disciplined, and inclusive campus environment",
+  "Strong parent-school communication and partnership",
 ];
 
 export const academicsPrograms = [
   {
-    title: "Primary Wing",
-    standards: "Grades I to V",
+    title: "Curriculum & Board Details",
+    standards: "CBSE with NCERT Textbooks",
     description:
-      "Literacy, numeracy, inquiry-based activities, and joyful learning routines.",
+      "Learner-centric curriculum with balanced intellectual, emotional, physical, social, and ethical development using activity-based and experiential learning.",
   },
   {
-    title: "Middle School",
-    standards: "Grades VI to VIII",
+    title: "Teaching Methodology",
+    standards: "Digital + Practical + Value-Based",
     description:
-      "Concept-driven curriculum with lab exposure, project learning, and communication skills.",
+      "Smart teaching tools, audio-visual resources, projects, experiments, and real-life application to build critical thinking, communication, and creativity.",
   },
   {
-    title: "Secondary",
-    standards: "Grades IX to X",
+    title: "Assessment & Evaluation",
+    standards: "Continuous and Comprehensive",
     description:
-      "Board-focused preparation, regular assessments, and strategic mentoring for high outcomes.",
+      "Balanced formative and summative assessments including projects, practicals, presentations, and enrichment tasks aligned with CBSE guidelines.",
+  },
+];
+
+export const academicsSections = [
+  {
+    title: "Remedial & Enrichment Programs",
+    points: [
+      "Personalized support through small-group instruction and concept reinforcement.",
+      "Advanced projects, Olympiads, quizzes, and research-based activities for high-performing learners.",
+      "Inclusive academic growth with regular follow-ups and mentoring.",
+    ],
+  },
+  {
+    title: "Life Skills Education",
+    points: [
+      "Communication, critical thinking, creative thinking, and problem solving.",
+      "Teamwork, leadership, time management, adaptability, and emotional intelligence.",
+      "Self-awareness, empathy, and ethical decision making.",
+    ],
+  },
+  {
+    title: "Value Education",
+    points: [
+      "Daily practices, assemblies, and classroom reflections rooted in integrity and respect.",
+      "Focus on honesty, empathy, discipline, responsibility, and civic sense.",
+      "Nurturing compassionate hearts and principled minds.",
+    ],
+  },
+  {
+    title: "Personality Development & Leadership Training",
+    points: [
+      "Public speaking, debates, group discussions, and leadership opportunities.",
+      "Student council, house activities, event management, and community initiatives.",
+      "Building confidence, accountability, resilience, and ethical leadership.",
+    ],
+  },
+  {
+    title: "Career Guidance & Counseling",
+    points: [
+      "Career orientation sessions, expert talks, and one-to-one counseling.",
+      "Guidance on streams, professional courses, competitive exams, and emerging careers.",
+      "Support for academic stress, emotional well-being, and personal development.",
+    ],
+  },
+  {
+    title: "NEP 2020 & Future Skills",
+    points: [
+      "Holistic, multidisciplinary, and experiential learning aligned with NEP 2020.",
+      "Technology-enabled education, digital literacy, and 21st-century competencies.",
+      "Preparing confident, responsible, and globally adaptive citizens.",
+    ],
   },
 ];
 
 export const activitiesList = [
   {
-    title: "Sports Excellence",
-    description: "Football, cricket, athletics, yoga, and indoor sports under expert coaching.",
+    title: "Dance & Music",
+    description:
+      "Classical, contemporary, folk, and modern dance with vocal and instrumental training and stage opportunities.",
   },
   {
-    title: "Arts & Culture",
+    title: "Art & Craft",
     description:
-      "Music, dance, theatre, and visual arts that cultivate creativity and self-expression.",
+      "Painting, sketching, sculpture, and handicrafts that build imagination, focus, patience, and expression.",
   },
   {
-    title: "Leadership Clubs",
+    title: "Drama & Cultural Activities",
     description:
-      "Debate, environment, coding, and social impact clubs to nurture confidence and teamwork.",
+      "Stage plays, storytelling, and cultural celebrations that strengthen confidence, empathy, and collaboration.",
+  },
+  {
+    title: "Sports & Physical Education",
+    description:
+      "Athletics, team games, fitness, and inter-school tournaments to build stamina, resilience, and sportsmanship.",
+  },
+  {
+    title: "Yoga & Meditation",
+    description:
+      "Mind-body practices that improve concentration, emotional balance, self-discipline, and well-being.",
+  },
+  {
+    title: "Clubs: Science, Eco, Literary, Cultural",
+    description:
+      "Interest-based clubs for innovation, sustainability, communication, artistic expression, and student leadership.",
+  },
+];
+
+export const interSchoolEvents = [
+  "Tarang 2025 Dance Competition: A Journey of Soulful Movements",
+  "Sketch-A-Thon: From Carbon Footprint to Climate Conscious Creativity",
+  "Cyclothon: Pedal for the Planet (Hingna Taluka Cyclothon)",
+  "Agaaz 2024 Team Sports: Kabaddi, Kho-Kho, Volleyball, Cricket",
+  "Athletics Events: 100m, 200m, 400m, relay, long jump, shot put",
+];
+
+export const achievementsSections = [
+  {
+    title: "Academic Achievements",
+    points: [
+      "Outstanding board and internal exam results.",
+      "Scholarships and merit awards at local, state, and national levels.",
+      "Excellence across Science, Mathematics, Languages, and Humanities.",
+    ],
+  },
+  {
+    title: "Sports Achievements",
+    points: [
+      "Ojas Deotale: 3 Gold Medals in Asian Games Archery; Arjuna Award winner.",
+      "Paris Kubde: National-level Chess achievements with multiple awards.",
+      "Devansh Attragade and Jivika Patle: National/State-level Karate medals.",
+      "Athletics and Football representation at district/division/national levels.",
+    ],
+  },
+  {
+    title: "Olympiads & Competitions",
+    points: [
+      "Rajbir Datta: 1st in State-level Science Olympiad with scholarship.",
+      "Krutika Balki & Harsh Khanke: 1st in National Spell Bee 2024.",
+      "Multiple students qualified at state level in Spell Bee, Handwriting, and Drawing.",
+    ],
   },
 ];
 
 export const disclosureInfo = [
-  { key: "Affiliation", value: "State Board Affiliated" },
-  { key: "Academic Session", value: "2026 - 2027" },
-  { key: "School UDISE Code", value: "27-13-123-456" },
-  { key: "Total Campus Area", value: "4.2 Acres" },
-  { key: "Total Classrooms", value: "68" },
-  { key: "Science & Computer Labs", value: "8" },
-  { key: "Library Holdings", value: "12,000+ Books" },
-  { key: "CCTV Coverage", value: "Complete Campus" },
+  { key: "Institution Name", value: "Shangrila English High School & Junior College" },
+  { key: "Established", value: "Since 2001" },
+  { key: "Curriculum", value: "CBSE (NCERT-aligned)" },
+  { key: "Campus Security", value: "CCTV, controlled entry/exit, trained staff" },
+  { key: "Health & Hygiene", value: "Regular check-ups, first-aid, hygienic campus" },
+  { key: "Transport Safety", value: "Monitored buses, trained drivers, escorts" },
+  { key: "Child Protection", value: "Strict protocols and awareness programs" },
+  { key: "Emergency Preparedness", value: "Fire drills and disaster response readiness" },
 ];
 
 export const disclosureDocuments = [
-  "Recognition Certificate",
-  "Building Safety Certificate",
-  "Fire Safety Certificate",
-  "Sanitation Certificate",
-  "Academic Calendar",
-  "Fee Structure (Current Session)",
-  "Annual Result Summary",
+  "Child Protection Policy",
+  "Anti-Bullying Policy",
+  "Safety & Security Policy",
+  "Privacy Policy",
+  "Grievance Redressal Policy",
+  "Health & Hygiene Guidelines",
+  "Transport Safety Guidelines",
+];
+
+export const safetyPolicies = [
+  {
+    title: "Child Protection Policy",
+    description:
+      "Strict prevention protocols, trained staff, student safety awareness, and close collaboration with parents and authorities.",
+  },
+  {
+    title: "Anti-Bullying Policy",
+    description:
+      "Zero tolerance for physical, verbal, emotional, and online bullying with prompt reporting and fair resolution.",
+  },
+  {
+    title: "Safety & Security Policy",
+    description:
+      "CCTV surveillance, secure entry/exit, emergency drills, first-aid systems, and monitored school transport.",
+  },
+  {
+    title: "Privacy Policy",
+    description:
+      "Student, parent, and staff data is used only for official purposes with secure storage and restricted access.",
+  },
+  {
+    title: "Grievance Redressal Policy",
+    description:
+      "Clear and accessible mechanism to submit concerns with prompt, confidential, and impartial resolution.",
+  },
 ];
 
 export const imageAssets = {
-  hero: "https://images.unsplash.com/photo-1600792170156-7fdc12ed6733",
-  building: "https://images.pexels.com/photos/30945258/pexels-photo-30945258.jpeg",
+  hero: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/yfjw0b1u_1000046477.png",
+  building: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/yfjw0b1u_1000046477.png",
   classroom: "https://images.unsplash.com/photo-1709290749293-c6152a187b14",
   activities: "https://images.unsplash.com/photo-1584376003963-e1aa9a61c0ac",
   campusGreen: "https://images.unsplash.com/photo-1680084521816-cc1ad0433ceb",

@@ -6,7 +6,7 @@ import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
-from typing import List
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
@@ -39,6 +39,14 @@ class StatusCheckCreate(BaseModel):
 
 
 class ContactMessageCreate(BaseModel):
+    student_name: Optional[str] = Field(default=None, min_length=2, max_length=120)
+    date_of_birth: Optional[str] = None
+    grade_standard: Optional[str] = Field(default=None, min_length=1, max_length=100)
+    academic_year: Optional[str] = Field(default=None, min_length=1, max_length=50)
+    parent_guardian_name: Optional[str] = Field(default=None, min_length=2, max_length=120)
+    residential_address: Optional[str] = Field(default=None, min_length=5, max_length=300)
+    transport_required: Optional[str] = Field(default=None, max_length=10)
+
     name: str = Field(min_length=2, max_length=120)
     email: EmailStr
     phone: str = Field(min_length=8, max_length=20)
@@ -50,6 +58,14 @@ class ContactMessage(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    student_name: Optional[str] = None
+    date_of_birth: Optional[str] = None
+    grade_standard: Optional[str] = None
+    academic_year: Optional[str] = None
+    parent_guardian_name: Optional[str] = None
+    residential_address: Optional[str] = None
+    transport_required: Optional[str] = None
+
     name: str
     email: EmailStr
     phone: str
