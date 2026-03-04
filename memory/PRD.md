@@ -87,6 +87,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 33. Updated leadership names: Principal → Mrs. Swati Damle, Manager → Ms. Shivali Satpute
 34. Updated opening hours and visitor timings across Contact + Footer with detailed schedule text
 35. Added LinkedIn social icon/link widget in header (desktop + mobile menu)
+36. Improved hero contrast for school name/text by darkening overlay/card and adding text shadow for readability
 
 ## Prioritized Backlog
 ### P0 (High Priority)
