@@ -22,11 +22,11 @@ export const HomePage = () => {
           <img
             src={imageAssets.hero}
             alt="Shangrila English High School campus building"
-            className="h-full w-full object-cover object-center brightness-110 saturate-110 sepia-[0.08]"
+            className="h-full w-full object-cover object-center brightness-110"
             loading="lazy"
             data-testid="home-hero-image"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#281508]/88 via-[#0f1d48]/62 to-[#fdfbf7] sm:from-[#281508]/80 sm:via-[#0f1d48]/52" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#040a1d]/88 via-[#0c1a43]/52 to-[#fdfbf7]" />
           <div className="grain-overlay" />
         </div>
 
