@@ -100,3 +100,11 @@ code {
         border-bottom-color: inherit;
     }
 }
+
+#emergent-badge,
+a[href*="utm_source=emergent-badge"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
