@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
-import { academicsPrograms, academicsSections, imageAssets } from "@/data/siteContent";
+import { academicStaff, academicsPrograms, academicsSections, imageAssets } from "@/data/siteContent";
 
 const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
@@ -58,6 +58,42 @@ export const AcademicsPage = () => {
             </Card>
           ))}
         </div>
+      </PageSection>
+
+      <PageSection className="mt-12" testId="academics-staff-section">
+        <Card className="border-slate-200 bg-white" data-testid="academics-staff-card-wrapper">
+          <CardContent className="p-7">
+            <h3 className="text-3xl font-bold text-slate-900" data-testid="academics-staff-heading">
+              Staff Directory
+            </h3>
+            <p className="mt-2 text-sm text-slate-600" data-testid="academics-staff-subheading">
+              Staff cards added below curriculum, as requested.
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-testid="academics-staff-grid">
+              {academicStaff.map((staff) => (
+                <Card key={staff.name} className="border-slate-200 bg-slate-50" data-testid={`academics-staff-item-${slugify(staff.name)}`}>
+                  <CardContent className="space-y-2 p-5">
+                    <h4 className="text-lg font-bold text-primary" data-testid={`academics-staff-name-${slugify(staff.name)}`}>
+                      {staff.name}
+                    </h4>
+                    <p className="text-xs font-bold uppercase tracking-wide text-amber-700" data-testid={`academics-staff-designation-${slugify(staff.name)}`}>
+                      {staff.designation}
+                    </p>
+                    <p className="text-sm text-slate-700" data-testid={`academics-staff-qualification-${slugify(staff.name)}`}>
+                      <span className="font-semibold">Qualification:</span> {staff.qualification}
+                    </p>
+                    <p className="text-sm text-slate-700" data-testid={`academics-staff-experience-${slugify(staff.name)}`}>
+                      <span className="font-semibold">Experience:</span> {staff.experience}
+                    </p>
+                    <p className="text-sm text-slate-700" data-testid={`academics-staff-specialization-${slugify(staff.name)}`}>
+                      <span className="font-semibold">Specialization:</span> {staff.specialization}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </PageSection>
 
       <PageSection className="mt-12" testId="academics-calendar-section">

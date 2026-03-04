@@ -200,6 +200,40 @@ export const academicsSections = [
   },
 ];
 
+export const academicStaff = [
+  { name: "MRS. SWATI DAMLE", designation: "Principal", qualification: "MA, B.SC, B.ED", experience: "29 Years", specialization: "School Leadership" },
+  { name: "MRS. VISHAKHA KHARABE", designation: "Teacher", qualification: "MA (Eng Lit), B.ED", experience: "18 Years", specialization: "English Literature" },
+  { name: "NEETA WANJARI", designation: "Teacher", qualification: "MA (Hin Lit), B.ED", experience: "18 Years", specialization: "Hindi Literature" },
+  { name: "MRS. JYOTSNA DAS", designation: "Teacher", qualification: "B.SC, B.ED", experience: "23 Years", specialization: "General Education" },
+  { name: "MRS. ANJALI DESHMUKH", designation: "Teacher", qualification: "MA (Mara Lit), B.ED", experience: "13 Years", specialization: "Marathi Literature" },
+  { name: "MR. PARASRAM CHOPDE", designation: "Teacher", qualification: "B.SC, B.ED", experience: "19 Years", specialization: "General Education" },
+  { name: "MR. DHAMMAPAL UKEY", designation: "Teacher", qualification: "M.SC, B.ED", experience: "4 Years", specialization: "General Education" },
+  { name: "MR. UJWAL CHAUHAN", designation: "Teacher", qualification: "BE, B.ED", experience: "12 Years", specialization: "General Education" },
+  { name: "MRS. VINEET KAUR", designation: "Teacher", qualification: "B.COM, M.A, B.ED, MBA, Visharad in Classical Music", experience: "3 Years", specialization: "Classical Music" },
+  { name: "MRS. TRISHALA SURYAWANSHI", designation: "Teacher", qualification: "BSC, B.ED", experience: "18 Years", specialization: "General Education" },
+  { name: "MRS. SWATI RAUT", designation: "Teacher", qualification: "BCCA, MCM", experience: "4 Years", specialization: "General Education" },
+  { name: "MRS. APARNA DWIVEDI", designation: "Teacher", qualification: "BA, B.ED", experience: "5 Years", specialization: "General Education" },
+  { name: "MRS. RAGINI SHRIVASTAVA", designation: "Teacher", qualification: "MSC, B.ED", experience: "3 Years", specialization: "General Education" },
+  { name: "MRS. KARUNA GANVIR", designation: "Teacher", qualification: "BSC, B.ED", experience: "6 Years", specialization: "General Education" },
+  { name: "MRS. SUPRIYA FULZELE", designation: "Teacher", qualification: "M.COM, B.ED", experience: "4 Years", specialization: "General Education" },
+  { name: "MRS. SUREKHA PIDURKAR", designation: "Librarian", qualification: "MA, BED, DLIB", experience: "3 Years", specialization: "Library Science" },
+  { name: "DR. SONAL PATEL", designation: "Counsellor", qualification: "PHD", experience: "N/A", specialization: "Counseling" },
+  { name: "MS. RESHMA THOSARE", designation: "Special Educator", qualification: "BSE, B.ED", experience: "N/A", specialization: "Special Education" },
+  { name: "MR. MUKESH ADHAU", designation: "Art Teacher", qualification: "MFA, B.ED", experience: "N/A", specialization: "Art" },
+  { name: "MR. ATUL DHONGDE", designation: "Music Teacher", qualification: "B.A, Sangeet Visharad", experience: "15 Years", specialization: "Music" },
+  { name: "MRS. SHYAM VERMA", designation: "PTI", qualification: "BA, B.PED", experience: "3 Years", specialization: "Physical Education" },
+  { name: "MRS. SONALI RAUT", designation: "Accountant", qualification: "B.COM", experience: "5 Years", specialization: "Accounting" },
+  { name: "MRS. VAISHALI BALPANDE", designation: "Clerk", qualification: "B.COM", experience: "14 Years", specialization: "Administration" },
+  { name: "MS. NIKHAT RIYAZ", designation: "Receptionist", qualification: "B.COM", experience: "1 Year", specialization: "Reception" },
+  { name: "MRS. JYOTI KHADSE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
+  { name: "MRS. SUSHILA TIJARE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
+  { name: "MRS. KANTA GOPALE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
+  { name: "MR. YADUNATH GOPALE", designation: "Attendant", qualification: "12th", experience: "N/A", specialization: "Support Staff" },
+  { name: "MR. CHANDAN KAMBLE", designation: "Guard", qualification: "10th", experience: "N/A", specialization: "Campus Security" },
+  { name: "MRS. PRIYA BAWANE", designation: "Sweeper", qualification: "8th", experience: "N/A", specialization: "Housekeeping" },
+  { name: "MRS. SHAKUN BAWANE", designation: "Sweeper", qualification: "8th", experience: "N/A", specialization: "Housekeeping" },
+];
+
 export const activitiesList = [
   {
     title: "Dance & Music",
