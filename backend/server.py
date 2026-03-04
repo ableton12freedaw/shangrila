@@ -1,11 +1,11 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List
 import uuid
 from datetime import datetime, timezone
@@ -37,6 +37,26 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+
+class ContactMessageCreate(BaseModel):
+    name: str = Field(min_length=2, max_length=120)
+    email: EmailStr
+    phone: str = Field(min_length=8, max_length=20)
+    subject: str = Field(min_length=3, max_length=200)
+    message: str = Field(min_length=10, max_length=2000)
+
+
+class ContactMessage(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    email: EmailStr
+    phone: str
+    subject: str
+    message: str
+    submitted_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -65,6 +85,32 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+
+@api_router.post("/contact-messages", response_model=ContactMessage)
+async def create_contact_message(input_data: ContactMessageCreate):
+    payload = ContactMessage(**input_data.model_dump())
+    doc = payload.model_dump()
+    doc["submitted_at"] = doc["submitted_at"].isoformat()
+
+    result = await db.contact_messages.insert_one(doc)
+    if not result.acknowledged:
+        raise HTTPException(status_code=500, detail="Unable to save contact message")
+
+    return payload
+
+
+@api_router.get("/contact-messages", response_model=List[ContactMessage])
+async def get_contact_messages():
+    messages = (
+        await db.contact_messages.find({}, {"_id": 0}).sort("submitted_at", -1).to_list(500)
+    )
+
+    for message in messages:
+        if isinstance(message.get("submitted_at"), str):
+            message["submitted_at"] = datetime.fromisoformat(message["submitted_at"])
+
+    return messages
 
 # Include the router in the main app
 app.include_router(api_router)
