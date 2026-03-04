@@ -12,14 +12,23 @@ export const SiteLayout = ({ children }) => {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <NavLink
             to="/"
-            className="flex flex-col"
+            className="flex items-center gap-3"
             data-testid="school-logo-home-link"
           >
-            <span className="text-lg font-black tracking-wide text-primary md:text-xl">
-              {schoolIdentity.name}
-            </span>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
-              {schoolIdentity.tagline}
+            <img
+              src="https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/4d74pdj6_1696927381790.png"
+              alt="Shangrila school logo"
+              className="h-12 w-12 rounded-full border border-slate-200 object-cover md:h-14 md:w-14"
+              loading="lazy"
+              data-testid="school-site-logo-image"
+            />
+            <span className="flex flex-col">
+              <span className="text-lg font-black tracking-wide text-primary md:text-xl">
+                {schoolIdentity.name}
+              </span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
+                {schoolIdentity.tagline}
+              </span>
             </span>
           </NavLink>
 
