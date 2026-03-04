@@ -81,6 +81,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 27. Applied platform-brand hover colors (Facebook blue, Instagram pink) and improved responsive gallery image rendering for mobile usability
 28. Made gallery photos tappable/clickable to open in a new tab, with visible "Tap to open" cue for mobile users
 29. Rolled back tap-to-open gallery interaction changes as per user request
+30. Implemented alternate mobile/performance fix without behavior change: responsive spacing tune, prioritized image loading for first gallery items, and ensured gallery grid renders immediately (no hidden on-scroll animation)
 
 ## Prioritized Backlog
 ### P0 (High Priority)
