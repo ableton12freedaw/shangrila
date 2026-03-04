@@ -12,6 +12,7 @@ export const navLinks = [
   { label: "ABOUT US", path: "/about-us" },
   { label: "ACADEMICS", path: "/academics" },
   { label: "ACTIVITIES", path: "/activities" },
+  { label: "GALLERY", path: "/gallery" },
   { label: "DISCLOSURE", path: "/disclosure" },
   { label: "CONTACT US", path: "/contact-us" },
 ];
@@ -319,7 +320,37 @@ export const safetyPolicies = [
 export const imageAssets = {
   hero: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/yfjw0b1u_1000046477.png",
   building: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/yfjw0b1u_1000046477.png",
-  classroom: "https://images.unsplash.com/photo-1709290749293-c6152a187b14",
-  activities: "https://images.unsplash.com/photo-1584376003963-e1aa9a61c0ac",
-  campusGreen: "https://images.unsplash.com/photo-1680084521816-cc1ad0433ceb",
+  classroom: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/fel4mtxi_1000047531.jpg",
+  activities: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/jk3mht3k_1000047533.jpg",
+  campusGreen: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/gz6em1ji_1000047535.jpg",
+  schoolWalk: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/lqz6l55j_1000047536.jpg",
+  teacherActivity: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/tfzwffed_1000047537.jpg",
 };
+
+export const schoolLifeGallery = [
+  {
+    title: "Focused Learning in Library Spaces",
+    category: "Academics",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/fel4mtxi_1000047531.jpg",
+  },
+  {
+    title: "Cricket and Team Spirit",
+    category: "Sports",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/jk3mht3k_1000047533.jpg",
+  },
+  {
+    title: "Joyful Campus Life",
+    category: "Student Life",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/gz6em1ji_1000047535.jpg",
+  },
+  {
+    title: "Care, Friendship, and Belonging",
+    category: "Values",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/lqz6l55j_1000047536.jpg",
+  },
+  {
+    title: "Hands-on Learning with Teachers",
+    category: "Classroom",
+    image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/tfzwffed_1000047537.jpg",
+  },
+];

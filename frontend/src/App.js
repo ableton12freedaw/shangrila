@@ -7,6 +7,7 @@ import { HomePage } from "@/pages/HomePage";
 import { AboutPage } from "@/pages/AboutPage";
 import { AcademicsPage } from "@/pages/AcademicsPage";
 import { ActivitiesPage } from "@/pages/ActivitiesPage";
+import { GalleryPage } from "@/pages/GalleryPage";
 import { DisclosurePage } from "@/pages/DisclosurePage";
 import { ContactPage } from "@/pages/ContactPage";
 
@@ -29,6 +30,7 @@ const AppRoutes = () => (
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/academics" element={<AcademicsPage />} />
         <Route path="/activities" element={<ActivitiesPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/acitivities" element={<Navigate to="/activities" replace />} />
         <Route path="/disclosure" element={<DisclosurePage />} />
         <Route path="/contact-us" element={<ContactPage />} />
