@@ -24,6 +24,12 @@ const initialForm = {
   message: "",
 };
 
+const schoolMapUrl =
+  "https://www.google.com/maps/place/Shangrila+English+High+School/@21.1094895,78.9542558,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd494f0bfffffff:0xcc72a79d310bf7dd!8m2!3d21.1094895!4d78.9542558!16s%2Fg%2F11clshkyxw?entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D";
+
+const schoolMapEmbedUrl =
+  "https://www.google.com/maps?q=21.1094895,78.9542558&z=17&output=embed";
+
 export const ContactPage = () => {
   const [form, setForm] = useState(initialForm);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -205,6 +211,40 @@ export const ContactPage = () => {
                 {isSubmitting ? "Submitting..." : "Submit Enquiry"}
               </Button>
             </form>
+          </CardContent>
+        </Card>
+      </PageSection>
+
+      <PageSection className="mt-12" testId="contact-map-section">
+        <Card className="overflow-hidden border-slate-200 bg-white" data-testid="contact-map-card">
+          <CardContent className="space-y-4 p-7">
+            <div className="flex flex-wrap items-center justify-between gap-3" data-testid="contact-map-header-row">
+              <h2 className="text-3xl font-bold text-slate-900" data-testid="contact-map-heading">
+                Find Us on Map
+              </h2>
+              <a
+                href={schoolMapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                data-testid="contact-map-open-google-link"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200" data-testid="contact-map-embed-wrapper">
+              <iframe
+                title="Shangrila English High School Location"
+                src={schoolMapEmbedUrl}
+                width="100%"
+                height="380"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+                data-testid="contact-map-embed-iframe"
+              />
+            </div>
           </CardContent>
         </Card>
       </PageSection>
