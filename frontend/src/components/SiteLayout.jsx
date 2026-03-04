@@ -16,9 +16,9 @@ export const SiteLayout = ({ children }) => {
             data-testid="school-logo-home-link"
           >
             <img
-              src="https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/4d74pdj6_1696927381790.png"
+              src={schoolIdentity.logo}
               alt="Shangrila school logo"
-              className="h-12 w-12 rounded-full border border-slate-200 object-cover md:h-14 md:w-14"
+              className="school-logo-premium h-12 w-12 rounded-full border border-slate-200 object-cover md:h-14 md:w-14"
               loading="lazy"
               data-testid="school-site-logo-image"
             />
@@ -61,7 +61,16 @@ export const SiteLayout = ({ children }) => {
       <footer className="mt-20 bg-[#0A192F] text-slate-300" data-testid="school-main-footer">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
           <div className="space-y-4" data-testid="footer-school-overview">
-            <h3 className="text-2xl font-bold text-white">{schoolIdentity.name}</h3>
+            <div className="flex items-center gap-3" data-testid="footer-school-brand-row">
+              <img
+                src={schoolIdentity.logo}
+                alt="Shangrila school logo"
+                className="school-logo-premium h-10 w-10 rounded-full border border-slate-500/40 object-cover"
+                loading="lazy"
+                data-testid="footer-school-logo-image"
+              />
+              <h3 className="text-2xl font-bold text-white">{schoolIdentity.name}</h3>
+            </div>
             <p className="text-sm leading-7 text-slate-300" data-testid="footer-school-tagline">
               {schoolIdentity.tagline}
             </p>

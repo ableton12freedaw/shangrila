@@ -1,6 +1,7 @@
 export const schoolIdentity = {
   name: "THE SHANGRILA ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
   tagline: "EDUCATING THE MINDS, REACHING THE HEARTS",
+  logo: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/4d74pdj6_1696927381790.png",
   address: "Hingna, Nagpur, Maharashtra, India",
   phone: "+91 98765 43210",
   email: "admissions@shangrilaschool.edu.in",

@@ -30,3 +30,18 @@
 .premium-shine:hover::after {
     transform: translate(60%, 0) rotate(25deg);
 }
+
+.school-logo-premium {
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.school-logo-premium:hover {
+    transform: translateY(-2px) scale(1.05);
+    filter: drop-shadow(0 0 14px rgba(59, 130, 246, 0.45));
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.6),
+        0 0 22px rgba(217, 119, 6, 0.35);
+}
