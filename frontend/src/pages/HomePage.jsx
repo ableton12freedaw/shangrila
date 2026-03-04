@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import { Award, BookOpen, Quote, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PageSection } from "@/components/PageSection";
 import {
@@ -49,14 +47,6 @@ export const HomePage = () => {
             <p className="mt-4 max-w-2xl text-sm leading-7 text-white/90 sm:text-lg sm:leading-8" data-testid="home-tagline-text">
               {schoolIdentity.tagline}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
-              <Button asChild className="premium-shine h-11 w-full rounded-full px-8 text-sm font-semibold sm:w-auto" data-testid="home-cta-contact-button">
-                <Link to="/contact-us">Enquire Now</Link>
-              </Button>
-              <Button asChild variant="outline" className="h-11 w-full rounded-full border-white/90 bg-[#0f1f4f]/75 px-8 text-sm font-semibold text-white hover:bg-[#0f1f4f]/90 sm:w-auto" data-testid="home-cta-disclosure-button">
-                <Link to="/disclosure">View Disclosure</Link>
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
