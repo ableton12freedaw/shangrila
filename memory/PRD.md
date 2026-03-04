@@ -12,6 +12,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Contact form: save submissions in backend
 - Follow-up request: fully replace demo text with uploaded `WEBSITE-1.docx` content, use uploaded school image on home hero, make hero content box transparent
 - Follow-up request: upload additional school photos and make them relatable in website via a school life gallery
+- Follow-up request: add uploaded disclosure files as downloadable links opening in new tab
 
 ## Architecture Decisions
 - Frontend: React + React Router multi-page architecture with reusable layout and page sections
@@ -48,10 +49,10 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
    - testing agent suites passed (frontend + backend), including extended field regression tests
 11. Added School Life Gallery page using uploaded real school photos with captions and categories
 12. Updated Academics/Activities contextual images to user-provided photos for better authenticity
+13. Disclosure section now includes real uploaded certificates/PDFs as clickable links that open in a new tab
 
 ## Prioritized Backlog
 ### P0 (High Priority)
-- Connect disclosure document buttons to real uploaded policy/document URLs/PDF files
 - Finalize official school contact and statutory details (phone/email/address, affiliations, codes)
 
 ### P1 (Medium Priority)
@@ -64,7 +65,6 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 - Add SEO metadata + structured data for better search visibility
 
 ## Next Tasks
-1. Upload and map actual disclosure policy PDFs for each listed policy
-2. Add admin enquiry review view with filters and export option
-3. Final content QA for all school details and official wording from management
-4. Optionally add filter tabs (Academics/Sports/Student Life) inside gallery page
+1. Add admin enquiry review view with filters and export option
+2. Final content QA for all school details and official wording from management
+3. Optionally add filter tabs (Academics/Sports/Student Life) inside gallery page

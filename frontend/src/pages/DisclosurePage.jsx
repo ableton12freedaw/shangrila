@@ -40,21 +40,22 @@ export const DisclosurePage = () => {
             <h2 className="text-3xl font-bold text-slate-900" data-testid="disclosure-documents-heading">Important Documents</h2>
             {disclosureDocuments.map((doc) => (
               <div
-                key={doc}
+                key={doc.title}
                 className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3"
-                data-testid={`disclosure-document-row-${doc.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                data-testid={`disclosure-document-row-${slugify(doc.title)}`}
               >
-                <p className="flex items-center gap-2 text-sm font-medium text-slate-700" data-testid={`disclosure-document-name-${doc.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
-                  <FileText className="h-4 w-4 text-amber-600" /> {doc}
+                <p className="flex items-center gap-2 text-sm font-medium text-slate-700" data-testid={`disclosure-document-name-${slugify(doc.title)}`}>
+                  <FileText className="h-4 w-4 text-amber-600" /> {doc.title}
                 </p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  type="button"
-                  className="h-9 rounded-full border-primary text-primary"
-                  data-testid={`disclosure-document-download-${doc.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-                >
-                  <Download className="mr-1 h-4 w-4" /> View
+                <Button asChild variant="outline" size="sm" className="h-9 rounded-full border-primary text-primary" data-testid={`disclosure-document-download-${slugify(doc.title)}`}>
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`disclosure-document-open-link-${slugify(doc.title)}`}
+                  >
+                    <Download className="mr-1 h-4 w-4" /> View
+                  </a>
                 </Button>
               </div>
             ))}

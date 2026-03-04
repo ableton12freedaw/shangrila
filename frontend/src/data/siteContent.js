@@ -280,13 +280,30 @@ export const disclosureInfo = [
 ];
 
 export const disclosureDocuments = [
-  "Child Protection Policy",
-  "Anti-Bullying Policy",
-  "Safety & Security Policy",
-  "Privacy Policy",
-  "Grievance Redressal Policy",
-  "Health & Hygiene Guidelines",
-  "Transport Safety Guidelines",
+  {
+    title: "Building Certificate",
+    url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/frawetdf_building-certificate.pdf",
+  },
+  {
+    title: "Land Certificate",
+    url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/xd9pciyc_land%20certificate.pdf",
+  },
+  {
+    title: "Population Certificate",
+    url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/8yb38osl_population%20certificate.pdf",
+  },
+  {
+    title: "Fire Safety Certificate",
+    url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/p9icr9qb_fire%20safety%20certificate.pdf",
+  },
+  {
+    title: "Extension of Affiliation Certificate",
+    url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/mpl4ywv7_extention%20of%20affilitaion%20certificate.pdf",
+  },
+  {
+    title: "Academic Calendar",
+    url: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/9uu7iptm_academic%20calender.pdf",
+  },
 ];
 
 export const safetyPolicies = [
