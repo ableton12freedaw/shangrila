@@ -197,10 +197,14 @@ export const SiteLayout = ({ children }) => {
           </div>
 
           <div className="space-y-3" data-testid="footer-working-hours">
-            <h4 className="text-lg font-semibold text-white">Office Hours</h4>
-            <p className="whitespace-pre-line text-sm leading-7" data-testid="footer-opening-hours-text">
-              {schoolIdentity.workingHours}
-            </p>
+            <h4 className="text-lg font-semibold text-white">Opening Hours</h4>
+            <ul className="space-y-1" data-testid="footer-opening-hours-list">
+              {schoolIdentity.openingHours.map((slot) => (
+                <li className="text-sm leading-7" key={slot.day} data-testid={`footer-opening-hours-item-${slot.day.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+                  <span className="font-semibold text-white">{slot.day}:</span> {slot.time}
+                </li>
+              ))}
+            </ul>
             <p className="text-sm leading-7 text-slate-200" data-testid="footer-visitor-timings-text">
               <span className="font-semibold text-white">Visitor Timings:</span> {schoolIdentity.visitorTimings}
               <br />

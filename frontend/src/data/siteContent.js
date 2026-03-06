@@ -5,8 +5,11 @@ export const schoolIdentity = {
   address: "Sangam Road, Hingna Road, Nagpur, Maharashtra, India",
   phone: "0788 786 1828",
   email: "admissions@shangrilaschool.edu.in",
-  workingHours:
-    "Monday – Friday: 8:45 AM to 2:45 PM\nSaturday: 8:45 AM to 12:45 PM\nSunday & Government Holidays: Closed",
+  openingHours: [
+    { day: "Monday – Friday", time: "8:45 AM to 2:45 PM" },
+    { day: "Saturday", time: "8:45 AM to 12:45 PM" },
+    { day: "Sunday & Government Holidays", time: "Closed" },
+  ],
   visitorTimings: "9:00 AM to 2:00 PM",
   visitorNote:
     "Our offices and school are open during these hours to assist students, parents, and visitors.",

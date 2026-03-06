@@ -100,9 +100,18 @@ export const ContactPage = () => {
             <p className="flex items-center gap-3 text-sm text-slate-700" data-testid="contact-email-row">
               <Mail className="h-5 w-5 text-amber-600" /> {schoolIdentity.email}
             </p>
-            <p className="whitespace-pre-line rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700" data-testid="contact-working-hours-row">
-              {schoolIdentity.workingHours}
-            </p>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4" data-testid="contact-working-hours-row">
+              <p className="mb-2 text-sm font-semibold text-slate-900" data-testid="contact-opening-hours-heading">
+                Opening Hours
+              </p>
+              <ul className="space-y-1" data-testid="contact-opening-hours-list">
+                {schoolIdentity.openingHours.map((slot) => (
+                  <li className="text-sm leading-7 text-slate-700" key={slot.day} data-testid={`contact-opening-hours-item-${slot.day.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+                    <span className="font-semibold text-slate-900">{slot.day}:</span> {slot.time}
+                  </li>
+                ))}
+              </ul>
+            </div>
             <p className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700" data-testid="contact-visitor-hours-row">
               <span className="font-semibold text-slate-900">Visitor Timings:</span> {schoolIdentity.visitorTimings}
               <br />

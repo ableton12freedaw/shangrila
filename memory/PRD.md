@@ -96,6 +96,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 42. Resolved SEO duplicate meta issue by removing conflicting static head tags and keeping route-wise Helmet metadata as single source
 43. Fixed Contact form error UX by relaxing strict validation thresholds and showing precise field-level error messages from backend responses
 44. Added global splash-banner popup modal on first website open per session using uploaded image with close action
+45. Synced timing/workday details between Contact page and Footer by rendering both from one shared opening-hours data source
 
 ## Prioritized Backlog
 ### P0 (High Priority)
