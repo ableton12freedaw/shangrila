@@ -94,6 +94,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 40. Rolled back all hero contrast enhancements to restore the original hero styling
 41. Implemented SEO optimization: per-page metadata/titles/canonicals, JSON-LD schema, robots.txt, sitemap.xml, and keyword targeting for Nagpur/CBSE/admissions intent
 42. Resolved SEO duplicate meta issue by removing conflicting static head tags and keeping route-wise Helmet metadata as single source
+43. Fixed Contact form error UX by relaxing strict validation thresholds and showing precise field-level error messages from backend responses
 
 ## Prioritized Backlog
 ### P0 (High Priority)

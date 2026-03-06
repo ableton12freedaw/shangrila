@@ -53,7 +53,17 @@ export const ContactPage = () => {
       toast.success("Thank you! Your enquiry has been submitted.");
       setForm(initialForm);
     } catch (error) {
-      toast.error("Unable to submit enquiry right now. Please try again.");
+      const details = error?.response?.data?.detail;
+
+      if (Array.isArray(details) && details.length > 0) {
+        const first = details[0];
+        const field = first?.loc?.[first.loc.length - 1] || "field";
+        toast.error(`Please check ${field}: ${first?.msg || "invalid value"}`);
+      } else if (typeof details === "string") {
+        toast.error(details);
+      } else {
+        toast.error("Unable to submit enquiry right now. Please try again.");
+      }
     } finally {
       setIsSubmitting(false);
     }
