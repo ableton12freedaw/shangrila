@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { navLinks, schoolIdentity } from "@/data/siteContent";
+import { SplashBannerModal } from "@/components/SplashBannerModal";
 
 export const SiteLayout = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -211,6 +212,8 @@ export const SiteLayout = ({ children }) => {
           </div>
         </div>
       </footer>
+
+      <SplashBannerModal />
     </div>
   );
 };

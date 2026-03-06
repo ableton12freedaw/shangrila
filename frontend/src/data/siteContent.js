@@ -431,3 +431,8 @@ export const schoolLifeGallery = [
     image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/ockdhxsa_1000047544.jpg",
   },
 ];
+
+export const splashBanner = {
+  image: "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/36hd93tj_IMG-20260306-WA0004.jpg",
+  alt: "Admission Open banner for Shangrila English High School & Junior College",
+};
