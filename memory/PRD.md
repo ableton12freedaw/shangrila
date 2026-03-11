@@ -97,6 +97,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 43. Fixed Contact form error UX by relaxing strict validation thresholds and showing precise field-level error messages from backend responses
 44. Added global splash-banner popup modal on first website open per session using uploaded image with close action
 45. Synced timing/workday details between Contact page and Footer by rendering both from one shared opening-hours data source
+46. Added animated sideways Notice Board section on Home page with key school updates
 
 ## Prioritized Backlog
 ### P0 (High Priority)

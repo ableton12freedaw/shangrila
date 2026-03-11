@@ -45,3 +45,17 @@
         0 0 0 2px rgba(255, 255, 255, 0.6),
         0 0 22px rgba(217, 119, 6, 0.35);
 }
+
+@keyframes notice-marquee-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.notice-marquee-track {
+    width: max-content;
+    animation: notice-marquee-left 22s linear infinite;
+}

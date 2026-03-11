@@ -32,6 +32,14 @@ export const quickStats = [
   { label: "Playground", value: "9,000 sq.m" },
 ];
 
+export const noticeBoardItems = [
+  "Admissions Open for Nursery to 12th (2026-27)",
+  "School Timings: Mon-Fri 8:45 AM to 2:45 PM",
+  "Saturday Timings: 8:45 AM to 12:45 PM",
+  "Visitor Timings: 9:00 AM to 2:00 PM",
+  "Follow us on Facebook, Instagram & LinkedIn",
+];
+
 export const homeHighlights = [
   {
     title: "Academic Results",

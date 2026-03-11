@@ -8,6 +8,7 @@ import {
   homeIntro,
   imageAssets,
   leadershipMessages,
+  noticeBoardItems,
   quickStats,
   schoolIdentity,
   welcomeMessage,
@@ -79,6 +80,35 @@ export const HomePage = () => {
           </motion.div>
         </div>
       </section>
+
+      <PageSection className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8" testId="home-notice-board-section">
+        <Card className="border-slate-200 bg-white/95" data-testid="home-notice-board-card">
+          <CardContent className="grid gap-4 p-4 sm:p-6 md:grid-cols-[220px_1fr] md:items-center">
+            <div className="rounded-xl bg-primary px-4 py-3 text-white" data-testid="home-notice-board-label-panel">
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-200" data-testid="home-notice-board-label">
+                Notice Board
+              </p>
+              <p className="mt-1 text-sm font-semibold" data-testid="home-notice-board-label-subtext">
+                Latest updates
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50" data-testid="home-notice-board-marquee-wrapper">
+              <div className="notice-marquee-track flex items-center gap-4 px-4 py-3" data-testid="home-notice-board-marquee-track">
+                {[...noticeBoardItems, ...noticeBoardItems].map((notice, index) => (
+                  <span
+                    key={`${notice}-${index}`}
+                    className="whitespace-nowrap rounded-full border border-amber-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 sm:text-sm"
+                    data-testid={`home-notice-item-${index + 1}`}
+                  >
+                    {notice}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </PageSection>
 
       <PageSection className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8" testId="home-welcome-message-section">
         <Card className="relative overflow-hidden border-amber-100 bg-white/95 shadow-sm" data-testid="home-welcome-message-card">
