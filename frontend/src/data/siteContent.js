@@ -40,6 +40,24 @@ export const noticeBoardItems = [
   "Follow us on Facebook, Instagram & LinkedIn",
 ];
 
+export const noticeBoardEvents = [
+  {
+    date: "05 Mar 2026",
+    title: "Admissions Open 2026-27 for Nursery to XII",
+    path: "/contact-us",
+  },
+  {
+    date: "12 Mar 2026",
+    title: "Orientation Session for New Parents",
+    path: "/contact-us",
+  },
+  {
+    date: "18 Mar 2026",
+    title: "Annual Cultural Showcase & Student Awards",
+    path: "/activities",
+  },
+];
+
 export const homeHighlights = [
   {
     title: "Academic Results",

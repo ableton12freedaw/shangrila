@@ -98,6 +98,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 44. Added global splash-banner popup modal on first website open per session using uploaded image with close action
 45. Synced timing/workday details between Contact page and Footer by rendering both from one shared opening-hours data source
 46. Added animated sideways Notice Board section on Home page with key school updates
+47. Redesigned Home notice area to reference style: left admissions highlight card + right vertical notice-board event panel
 
 ## Prioritized Backlog
 ### P0 (High Priority)
