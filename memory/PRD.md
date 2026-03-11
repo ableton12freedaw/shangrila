@@ -100,6 +100,7 @@ Build a school website based in India, multipage, including pages: HOME, ABOUT U
 46. Added animated sideways Notice Board section on Home page with key school updates
 47. Redesigned Home notice area to reference style: left admissions highlight card + right vertical notice-board event panel
 48. Refined again per feedback to keep only the copied/blended notice-board block without altering adjacent Home sections
+49. Rolled back the last two notice-board redesign iterations and restored the previous animated marquee notice-board layout
 
 ## Prioritized Backlog
 ### P0 (High Priority)

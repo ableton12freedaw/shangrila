@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Award, BookOpen, Quote, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,7 +8,7 @@ import {
   homeIntro,
   imageAssets,
   leadershipMessages,
-  noticeBoardEvents,
+  noticeBoardItems,
   quickStats,
   schoolIdentity,
   welcomeMessage,
@@ -83,38 +82,32 @@ export const HomePage = () => {
       </section>
 
       <PageSection className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8" testId="home-notice-board-section">
-        <div className="flex justify-end" data-testid="home-notice-board-layout-grid">
-          <Card className="w-full max-w-xl overflow-hidden border-indigo-700 bg-[#2f2db6] text-white" data-testid="home-notice-board-card">
-            <CardContent className="space-y-4 p-5 sm:p-6" data-testid="home-notice-board-content">
-              <p className="text-sm font-bold uppercase tracking-[0.24em] text-amber-300" data-testid="home-notice-board-label">
+        <Card className="border-slate-200 bg-white/95" data-testid="home-notice-board-card">
+          <CardContent className="grid gap-4 p-4 sm:p-6 md:grid-cols-[220px_1fr] md:items-center">
+            <div className="rounded-xl bg-primary px-4 py-3 text-white" data-testid="home-notice-board-label-panel">
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-200" data-testid="home-notice-board-label">
                 Notice Board
               </p>
-              <div className="space-y-4" data-testid="home-notice-board-events-list">
-                {noticeBoardEvents.map((event) => (
-                  <div className="grid grid-cols-[64px_1fr] gap-3 rounded-xl border border-white/20 bg-white/10 p-3" key={event.title} data-testid={`home-notice-event-card-${slugify(event.title)}`}>
-                    <div className="flex h-16 w-16 flex-col items-center justify-center rounded-full bg-amber-100 text-center text-[11px] font-bold leading-4 text-[#2f2db6]" data-testid={`home-notice-event-date-${slugify(event.title)}`}>
-                      {event.date.split(" ").map((part) => (
-                        <span key={part}>{part}</span>
-                      ))}
-                    </div>
-                    <div>
-                      <p className="text-sm leading-6 text-white" data-testid={`home-notice-event-title-${slugify(event.title)}`}>
-                        {event.title}
-                      </p>
-                      <Link
-                        to={event.path}
-                        className="mt-2 inline-flex text-sm font-semibold text-cyan-200 transition-colors hover:text-cyan-100"
-                        data-testid={`home-notice-event-link-${slugify(event.title)}`}
-                      >
-                        Know More →
-                      </Link>
-                    </div>
-                  </div>
+              <p className="mt-1 text-sm font-semibold" data-testid="home-notice-board-label-subtext">
+                Latest updates
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50" data-testid="home-notice-board-marquee-wrapper">
+              <div className="notice-marquee-track flex items-center gap-4 px-4 py-3" data-testid="home-notice-board-marquee-track">
+                {[...noticeBoardItems, ...noticeBoardItems].map((notice, index) => (
+                  <span
+                    key={`${notice}-${index}`}
+                    className="whitespace-nowrap rounded-full border border-amber-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 sm:text-sm"
+                    data-testid={`home-notice-item-${index + 1}`}
+                  >
+                    {notice}
+                  </span>
                 ))}
               </div>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </CardContent>
+        </Card>
       </PageSection>
 
       <PageSection className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8" testId="home-welcome-message-section">
