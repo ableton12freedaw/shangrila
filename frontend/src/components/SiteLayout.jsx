@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { navLinks, schoolIdentity } from "@/data/siteContent";
 import { SplashBannerModal } from "@/components/SplashBannerModal";
+import { FloatingAdmissionBell } from "@/components/FloatingAdmissionBell";
 
 export const SiteLayout = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -217,6 +218,7 @@ export const SiteLayout = ({ children }) => {
         </div>
       </footer>
 
+      <FloatingAdmissionBell />
       <SplashBannerModal />
     </div>
   );

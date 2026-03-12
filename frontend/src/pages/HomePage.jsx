@@ -81,48 +81,42 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <PageSection className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8" testId="home-notice-board-section">
-        <Card className="border-slate-200 bg-white/95" data-testid="home-notice-board-card">
-          <CardContent className="grid gap-4 p-4 sm:p-6 md:grid-cols-[220px_1fr] md:items-center">
-            <div className="rounded-xl bg-primary px-4 py-3 text-white" data-testid="home-notice-board-label-panel">
+      <PageSection className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8" testId="home-welcome-notice-combined-section">
+        <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]" data-testid="home-welcome-notice-layout-grid">
+          <Card className="relative overflow-hidden border-amber-100 bg-white/95 shadow-sm" data-testid="home-welcome-message-card">
+            <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-b from-amber-500 to-primary" />
+            <CardContent className="space-y-4 p-7 pl-8 md:p-10 md:pl-12">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-700" data-testid="home-welcome-label">
+                Welcome Message
+              </p>
+              <Quote className="h-8 w-8 text-amber-500" data-testid="home-welcome-quote-icon" />
+              <blockquote className="text-base italic leading-8 text-slate-700 md:text-lg" data-testid="home-welcome-message">
+                “{welcomeMessage}”
+              </blockquote>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden border-indigo-700 bg-[#2f2db6] text-white" data-testid="home-notice-board-card">
+            <CardContent className="space-y-4 p-5 sm:p-6" data-testid="home-notice-board-content">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-200" data-testid="home-notice-board-label">
                 Notice Board
               </p>
-              <p className="mt-1 text-sm font-semibold" data-testid="home-notice-board-label-subtext">
-                Latest updates
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-50" data-testid="home-notice-board-marquee-wrapper">
-              <div className="notice-marquee-track flex items-center gap-4 px-4 py-3" data-testid="home-notice-board-marquee-track">
-                {[...noticeBoardItems, ...noticeBoardItems].map((notice, index) => (
-                  <span
-                    key={`${notice}-${index}`}
-                    className="whitespace-nowrap rounded-full border border-amber-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 sm:text-sm"
-                    data-testid={`home-notice-item-${index + 1}`}
-                  >
-                    {notice}
-                  </span>
-                ))}
+              <div className="h-64 overflow-hidden rounded-xl border border-white/20 bg-white/10" data-testid="home-notice-board-vertical-wrapper">
+                <div className="notice-vertical-track space-y-3 p-3" data-testid="home-notice-board-vertical-track">
+                  {[...noticeBoardItems, ...noticeBoardItems].map((notice, index) => (
+                    <p
+                      key={`${notice}-${index}`}
+                      className="rounded-lg bg-white/15 px-3 py-2 text-sm leading-6 text-white"
+                      data-testid={`home-notice-item-${index + 1}`}
+                    >
+                      {notice}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-      </PageSection>
-
-      <PageSection className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8" testId="home-welcome-message-section">
-        <Card className="relative overflow-hidden border-amber-100 bg-white/95 shadow-sm" data-testid="home-welcome-message-card">
-          <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-b from-amber-500 to-primary" />
-          <CardContent className="space-y-4 p-7 pl-8 md:p-10 md:pl-12">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-700" data-testid="home-welcome-label">
-              Welcome Message
-            </p>
-            <Quote className="h-8 w-8 text-amber-500" data-testid="home-welcome-quote-icon" />
-            <blockquote className="text-base italic leading-8 text-slate-700 md:text-lg" data-testid="home-welcome-message">
-              “{welcomeMessage}”
-            </blockquote>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </PageSection>
 
       <PageSection className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" testId="home-quick-stats-section">

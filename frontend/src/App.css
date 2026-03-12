@@ -59,3 +59,16 @@
     width: max-content;
     animation: notice-marquee-left 22s linear infinite;
 }
+
+@keyframes notice-vertical-scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.notice-vertical-track {
+    animation: notice-vertical-scroll 18s linear infinite;
+}
