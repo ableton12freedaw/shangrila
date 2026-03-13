@@ -96,17 +96,17 @@ export const HomePage = () => {
             </CardContent>
           </Card>
 
-          <Card className="overflow-hidden border-slate-700 bg-[#0A192F] text-white" data-testid="home-notice-board-card">
+          <Card className="overflow-hidden border-primary/30 bg-primary text-white" data-testid="home-notice-board-card">
             <CardContent className="space-y-4 p-5 sm:p-6" data-testid="home-notice-board-content">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-400" data-testid="home-notice-board-label">
                 Notice Board
               </p>
-              <div className="h-64 overflow-hidden rounded-xl border border-amber-500/20 bg-white/5" data-testid="home-notice-board-vertical-wrapper">
+              <div className="h-64 overflow-hidden rounded-xl border border-white/15 bg-white/10" data-testid="home-notice-board-vertical-wrapper">
                 <div className="notice-vertical-track space-y-3 p-3" data-testid="home-notice-board-vertical-track">
                   {[...noticeBoardItems, ...noticeBoardItems].map((notice, index) => (
                     <p
                       key={`${notice}-${index}`}
-                      className="rounded-lg border border-amber-500/10 bg-white/10 px-3 py-2 text-sm leading-6 text-slate-200"
+                      className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm leading-6 text-slate-100"
                       data-testid={`home-notice-item-${index + 1}`}
                     >
                       {notice}
