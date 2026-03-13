@@ -61,7 +61,10 @@ export const FloatingAdmissionBell = () => {
         <span className="floating-bell-ring inline-flex rounded-full bg-white/25 p-1.5">
           <Bell className="h-5 w-5" />
         </span>
-        <span className="text-sm font-bold uppercase tracking-wide">Admissions Open</span>
+        <span className="flex flex-col leading-tight">
+          <span className="text-sm font-bold uppercase tracking-wide">Admissions Open</span>
+          <span className="text-[10px] font-semibold tracking-wider text-amber-100">2026-27</span>
+        </span>
       </button>
 
       {isOpen && (
