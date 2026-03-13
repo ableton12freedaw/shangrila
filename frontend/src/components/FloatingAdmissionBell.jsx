@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/sonner";
-import { submitContactMessage } from "@/services/api";
+import { submitAdmissionEnquiry } from "@/services/api";
 
 const initialState = {
   name: "",
@@ -29,18 +29,16 @@ export const FloatingAdmissionBell = () => {
     setIsSubmitting(true);
 
     const payload = {
-      name: form.name,
+      parent_name: form.name,
       email: form.email,
       phone: form.phone,
-      subject: "Admission Enquiry",
-      message: form.message,
       student_name: form.studentName || undefined,
-      grade_standard: form.grade || undefined,
-      parent_guardian_name: form.name || undefined,
+      grade: form.grade || undefined,
+      message: form.message,
     };
 
     try {
-      await submitContactMessage(payload);
+      await submitAdmissionEnquiry(payload);
       toast.success("Admission enquiry submitted successfully.");
       setForm(initialState);
       setIsOpen(false);

@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const FALLBACK_SITE_URL = "https://school-connect-in-1.preview.emergentagent.com";
+const FALLBACK_SITE_URL = "https://educational-hub-5.preview.emergentagent.com";
 const OG_IMAGE_URL = "https://customer-assets.emergentagent.com/job_school-connect-in-1/artifacts/yfjw0b1u_1000046477.png";
 
 const getSiteUrl = () => {

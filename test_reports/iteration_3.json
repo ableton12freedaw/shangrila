@@ -30,6 +30,6 @@
   "seed_data_creation": "None",
   "retest_needed": false,
   "should_main_agent_self_test": true,
-  "context_for_next_testing_agent": "Validated on https://school-connect-in-1.preview.emergentagent.com. /gallery loads from navbar and direct route, all 5 gallery images/cards render, and Academics/Activities updated images load correctly with stable layout.",
+  "context_for_next_testing_agent": "Validated on https://educational-hub-5.preview.emergentagent.com. /gallery loads from navbar and direct route, all 5 gallery images/cards render, and Academics/Activities updated images load correctly with stable layout.",
   "rca of the issue": "No functional issue reproduced in this iteration."
 }

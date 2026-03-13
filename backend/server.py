@@ -54,6 +54,28 @@ class ContactMessageCreate(BaseModel):
     message: str = Field(min_length=3, max_length=2000)
 
 
+class AdmissionEnquiryCreate(BaseModel):
+    parent_name: str = Field(min_length=2, max_length=120)
+    email: EmailStr
+    phone: str = Field(min_length=7, max_length=20)
+    student_name: Optional[str] = Field(default=None, max_length=120)
+    grade: Optional[str] = Field(default=None, max_length=50)
+    message: str = Field(min_length=3, max_length=2000)
+
+
+class AdmissionEnquiry(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    parent_name: str
+    email: EmailStr
+    phone: str
+    student_name: Optional[str] = None
+    grade: Optional[str] = None
+    message: str
+    submitted_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
 class ContactMessage(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
@@ -127,6 +149,37 @@ async def get_contact_messages():
             message["submitted_at"] = datetime.fromisoformat(message["submitted_at"])
 
     return messages
+
+@api_router.get("/health")
+async def health_check():
+    return {"status": "ok"}
+
+
+@api_router.post("/admission-enquiries", response_model=AdmissionEnquiry)
+async def create_admission_enquiry(input_data: AdmissionEnquiryCreate):
+    payload = AdmissionEnquiry(**input_data.model_dump())
+    doc = payload.model_dump()
+    doc["submitted_at"] = doc["submitted_at"].isoformat()
+
+    result = await db.admission_enquiries.insert_one(doc)
+    if not result.acknowledged:
+        raise HTTPException(status_code=500, detail="Unable to save admission enquiry")
+
+    return payload
+
+
+@api_router.get("/admission-enquiries", response_model=List[AdmissionEnquiry])
+async def get_admission_enquiries():
+    enquiries = (
+        await db.admission_enquiries.find({}, {"_id": 0}).sort("submitted_at", -1).to_list(500)
+    )
+
+    for item in enquiries:
+        if isinstance(item.get("submitted_at"), str):
+            item["submitted_at"] = datetime.fromisoformat(item["submitted_at"])
+
+    return enquiries
+
 
 # Include the router in the main app
 app.include_router(api_router)

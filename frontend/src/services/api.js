@@ -8,3 +8,8 @@ export const submitContactMessage = async (payload) => {
   const response = await axios.post(`${API_BASE_URL}/contact-messages`, payload);
   return response.data;
 };
+
+export const submitAdmissionEnquiry = async (payload) => {
+  const response = await axios.post(`${API_BASE_URL}/admission-enquiries`, payload);
+  return response.data;
+};
