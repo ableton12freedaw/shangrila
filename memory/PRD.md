@@ -1,123 +1,60 @@
-# PRD - THE SHANGRILA ENGLISH HIGH SCHOOL Website
+# THE SHANGRILA ENGLISH HIGH SCHOOL & JUNIOR COLLEGE — PRD
 
 ## Original Problem Statement
-Build a school website based in India, multipage, including pages: HOME, ABOUT US, ACADEMICS, ACITIVITIES, DISCLOSURE, CONTACT US.
+Build a multi-page website for a school in India named "THE SHANGRILA ENGLISH HIGH SCHOOL" with the tagline "EDUCATING THE MINDS, REACHING THE HEARTS." Pages: HOME, ABOUT US, ACADEMICS, ACTIVITIES, GALLERY, DISCLOSURE, and CONTACT US. Modern premium design, English language, mobile-friendly.
 
-## User Choices
-- School name: THE SHANGRILA ENGLISH HIGH SCHOOL
-- Tagline: EDUCATING THE MINDS, REACHING THE HEARTS
-- Visual style: Modern & premium
-- Language: English only
-- Disclosure page: mandatory school information + important documents
-- Contact form: save submissions in backend
-- Follow-up request: fully replace demo text with uploaded `WEBSITE-1.docx` content, use uploaded school image on home hero, make hero content box transparent
-- Follow-up request: upload additional school photos and make them relatable in website via a school life gallery
-- Follow-up request: add uploaded disclosure files as downloadable links opening in new tab
-- Follow-up request: keep separate Download button and add small PDF icons + file size labels in Disclosure
-- Follow-up request: add provided school site logo beside school name in header
-- Follow-up request: place logo in footer + favicon and add subtle hover animation/glow
-- Follow-up request: update school address and phone number
-- Follow-up request: add Google Map widget in Contact Us using provided location URL
-- Follow-up request: add newly uploaded photos and add one-click Get Directions button for parents
-- Follow-up request: keep welcome message separated as its own section
-- Follow-up request: move welcome message closer to hero and style it as quote block
-- Follow-up request: import teacher/staff details as staff cards in Academics below curriculum
-- Follow-up request: remove non-teaching staff from Academics staff cards
-- Follow-up request: remove "Made with Emergent" badge from website view
-- Follow-up request: final clean branding pass for title/meta/favicon and school short-name in browser title
-- Follow-up request: add Facebook and Instagram icons/links in header
-- Follow-up request: apply official brand hover colors to social icons and improve mobile gallery visibility
-- Follow-up request: fix gallery photos opening issue in mobile browsers
+## Core Requirements
+- Multi-page structure with all specified pages
+- School-specific content, logo, images from user
+- Disclosure page with downloadable documents
+- Image gallery with lightbox
+- Contact form (MongoDB-backed)
+- Staff section on Academics page
+- Animated notice board on homepage
+- Floating bell icon → admission enquiry form
+- Social media links (Facebook, Instagram, LinkedIn)
+- SEO (metadata, sitemap, robots.txt)
+- Mobile responsive
 
-## Architecture Decisions
-- Frontend: React + React Router multi-page architecture with reusable layout and page sections
-- Backend: FastAPI with MongoDB (Motor)
-- Database collections:
-  - `contact_messages` for enquiry submissions
-  - existing `status_checks` retained
-- UX approach: premium navy-gold theme, transparent hero content panel, responsive section layouts, motion reveal
+## Tech Stack
+- **Frontend:** React, React Router, TailwindCSS, Shadcn/UI, Framer Motion
+- **Backend:** FastAPI (Python)
+- **Database:** MongoDB (motor async driver)
 
-## What Has Been Implemented
-1. Multipage navigation and routes:
-   - / (HOME)
-   - /about-us
-   - /academics
-   - /activities
-   - /gallery
-   - /disclosure
-   - /contact-us
-   - typo alias redirect /acitivities -> /activities
-2. Fully designed pages with responsive premium UI and image-led content
-3. Imported and structured document content across all core pages (Home/About/Academics/Activities/Disclosure/Contact)
-4. Home hero updated with uploaded school building image and transparent overlay card as requested
-5. Disclosure page updated with safety-policy-focused mandatory information and important policy documents
-6. Contact form updated to admission enquiry structure (student + guardian + grade + transport + remarks) with backend integration
-5. Backend APIs:
-   - POST /api/contact-messages
-   - GET /api/contact-messages
-7. Backend model extended to persist additional admission fields in MongoDB
-8. Toast-based user feedback on successful/failed form submission
-9. Extensive `data-testid` coverage for key interactive and user-facing elements
-10. Validation/testing completed:
-   - curl API tests passed
-   - browser flow screenshots captured
-   - testing agent suites passed (frontend + backend), including extended field regression tests
-11. Added School Life Gallery page using uploaded real school photos with captions and categories
-12. Updated Academics/Activities contextual images to user-provided photos for better authenticity
-13. Disclosure section now includes real uploaded certificates/PDFs as clickable links that open in a new tab
-14. Disclosure document list now has separate Open + Download actions, PDF badges, and file-size labels for each file
-15. Added provided school logo beside school name/tagline in top header navigation
-16. Added same logo in footer branding, configured favicon/apple-touch icon, and applied subtle premium hover glow animation on logos
-17. Updated school contact details globally: address and phone number reflected across contact and footer sections
-18. Added Google Map widget section in Contact Us with embedded map and "Open in Google Maps" link
-19. Added one-click "Get Directions" CTA in Contact map section and integrated 5 additional uploaded school photos into gallery
-20. Separated Home page welcome message into a dedicated standalone section/card
-21. Repositioned welcome section near hero and redesigned it as a premium quote block
-22. Imported teacher/staff details from uploaded document and added Staff Cards section in Academics below curriculum
-23. Removed non-teaching roles from Academics cards and retained only teaching/academic-support staff
-24. Removed/hid "Made with Emergent" badge from frontend output for cleaner branding
-25. Completed branding pass in public HTML: updated browser title with short-name, SEO/meta tags, OG/Twitter tags, and favicon labels
-26. Added Facebook and Instagram header icons linked to official school social pages
-27. Applied platform-brand hover colors (Facebook blue, Instagram pink) and improved responsive gallery image rendering for mobile usability
-28. Made gallery photos tappable/clickable to open in a new tab, with visible "Tap to open" cue for mobile users
-29. Rolled back tap-to-open gallery interaction changes as per user request
-30. Implemented alternate mobile/performance fix without behavior change: responsive spacing tune, prioritized image loading for first gallery items, and ensured gallery grid renders immediately (no hidden on-scroll animation)
-31. Full-site mobile-friendly pass: responsive header with hamburger menu, scalable hero typography/buttons, disclosure overflow containment, and improved mobile readability/navigation across all pages
-32. Removed Home hero CTA buttons ("Enquire Now" and "View Disclosure") as requested
-33. Updated leadership names: Principal → Mrs. Swati Damle, Manager → Ms. Shivali Satpute
-34. Updated opening hours and visitor timings across Contact + Footer with detailed schedule text
-35. Added LinkedIn social icon/link widget in header (desktop + mobile menu)
-36. Improved hero contrast for school name/text by darkening overlay/card and adding text shadow for readability
-37. Applied second hero refinement pass: slightly brighter image with darker top overlay for balanced readability and visual depth
-38. Added warm-tone tuning + responsive overlay intensity (mobile darker, desktop balanced) for consistent hero readability
-39. Rolled back the latest warm-tone/overlay-intensity pass to restore previous hero balance
-40. Rolled back all hero contrast enhancements to restore the original hero styling
-41. Implemented SEO optimization: per-page metadata/titles/canonicals, JSON-LD schema, robots.txt, sitemap.xml, and keyword targeting for Nagpur/CBSE/admissions intent
-42. Resolved SEO duplicate meta issue by removing conflicting static head tags and keeping route-wise Helmet metadata as single source
-43. Fixed Contact form error UX by relaxing strict validation thresholds and showing precise field-level error messages from backend responses
-44. Added global splash-banner popup modal on first website open per session using uploaded image with close action
-45. Synced timing/workday details between Contact page and Footer by rendering both from one shared opening-hours data source
-46. Added animated sideways Notice Board section on Home page with key school updates
-47. Redesigned Home notice area to reference style: left admissions highlight card + right vertical notice-board event panel
-48. Refined again per feedback to keep only the copied/blended notice-board block without altering adjacent Home sections
-49. Rolled back the last two notice-board redesign iterations and restored the previous animated marquee notice-board layout
-50. Moved notice board beside welcome message and converted notice animation to vertical auto-scroll
-51. Added floating bell icon widget that opens a quick admission enquiry form modal and saves submissions
+## What's Been Implemented (as of 13 Mar 2026)
+- [x] All pages: Home, About, Academics, Activities, Gallery, Disclosure, Contact
+- [x] Content & branding integrated (logo, tagline, images)
+- [x] Contact form → POST /api/contact-messages → MongoDB
+- [x] Disclosure page with downloadable PDFs
+- [x] Staff section on Academics
+- [x] Google Maps embed + Get Directions on Contact
+- [x] SEO: sitemap.xml, robots.txt, meta tags, schema.org
+- [x] Splash banner on site load
+- [x] Social media icons in header & footer
+- [x] Animated notice board (vertical auto-scroll) on homepage
+- [x] Floating "ADMISSIONS OPEN" bell → admission enquiry modal
+- [x] POST /api/admission-enquiries → MongoDB (dedicated collection)
+- [x] GET /api/admission-enquiries
+- [x] GET /api/health endpoint
+- [x] Gallery lightbox with prev/next/close (desktop + mobile)
+- [x] Bell button: animated pulse glow + ring wiggle, amber gradient, "ADMISSIONS OPEN" label
+
+## DB Collections
+- `contact_messages`: { name, email, phone, subject, message, student_name?, date_of_birth?, grade_standard?, academic_year?, parent_guardian_name?, residential_address?, transport_required?, submitted_at }
+- `admission_enquiries`: { parent_name, email, phone, student_name?, grade?, message, submitted_at }
+
+## API Endpoints
+- GET  /api/health
+- POST /api/contact-messages
+- GET  /api/contact-messages
+- POST /api/admission-enquiries
+- GET  /api/admission-enquiries
 
 ## Prioritized Backlog
-### P0 (High Priority)
-- Finalize official school contact and statutory details (phone/email/address, affiliations, codes)
-
-### P1 (Medium Priority)
-- Add admin dashboard to review contact enquiries
-- Add spam protection (captcha/rate limiting) on contact form
-- Tighten CORS origin configuration for production safety
-
-### P2 (Low Priority)
-- Add downloadable admission brochure and online admission pre-registration
-- Add SEO metadata + structured data for better search visibility
-
-## Next Tasks
-1. Add admin enquiry review view with filters and export option
-2. Final content QA for all school details and official wording from management
-3. Optionally add filter tabs (Academics/Sports/Student Life) inside gallery page
+### P1
+- Mobile gallery verification on real devices
+### P2
+- Connect contact form to Google Sheets (pending user confirmation)
+- Admin dashboard for form submissions
+### P3
+- Further SEO & performance tuning

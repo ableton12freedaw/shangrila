@@ -72,3 +72,43 @@
 .notice-vertical-track {
     animation: notice-vertical-scroll 18s linear infinite;
 }
+
+/* Floating bell pulse glow */
+@keyframes bell-pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 24px rgba(217, 119, 6, 0.45);
+    }
+    50% {
+        box-shadow: 0 4px 32px rgba(217, 119, 6, 0.7), 0 0 0 10px rgba(217, 119, 6, 0.12);
+    }
+}
+
+.floating-bell-pulse {
+    animation: bell-pulse-glow 2.2s ease-in-out infinite;
+}
+
+/* Bell ring wiggle */
+@keyframes bell-ring {
+    0%, 70%, 100% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(12deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    85% {
+        transform: rotate(8deg);
+    }
+    90% {
+        transform: rotate(-6deg);
+    }
+    95% {
+        transform: rotate(3deg);
+    }
+}
+
+.floating-bell-ring {
+    animation: bell-ring 3s ease-in-out infinite;
+}
