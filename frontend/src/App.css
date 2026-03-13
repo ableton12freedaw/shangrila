@@ -76,10 +76,10 @@
 /* Floating bell pulse glow */
 @keyframes bell-pulse-glow {
     0%, 100% {
-        box-shadow: 0 4px 24px rgba(217, 119, 6, 0.45);
+        box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
     }
     50% {
-        box-shadow: 0 4px 32px rgba(217, 119, 6, 0.7), 0 0 0 10px rgba(217, 119, 6, 0.12);
+        box-shadow: 0 6px 36px rgba(26, 35, 126, 0.7), 0 0 0 10px rgba(30, 136, 229, 0.12);
     }
 }
 

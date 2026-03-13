@@ -54,16 +54,15 @@ export const FloatingAdmissionBell = () => {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="floating-bell-pulse fixed bottom-5 right-5 z-[90] flex items-center gap-2.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 py-3 pl-4 pr-5 text-white shadow-[0_4px_24px_rgba(217,119,6,0.45)] transition-transform hover:scale-105"
+        className="floating-bell-pulse fixed bottom-6 right-5 z-[90] flex flex-col items-center gap-1 rounded-2xl bg-gradient-to-b from-[#1e88e5] to-[#1a237e] px-5 pb-3 pt-4 text-white shadow-[0_6px_28px_rgba(26,35,126,0.5)] transition-transform hover:scale-105"
         data-testid="floating-admission-bell-button"
         aria-label="Open admission enquiry form"
       >
-        <span className="floating-bell-ring inline-flex rounded-full bg-white/25 p-1.5">
-          <Bell className="h-5 w-5" />
+        <span className="floating-bell-ring -mt-9 mb-1 inline-flex rounded-full border-[3px] border-white bg-white p-3 shadow-md">
+          <Bell className="h-7 w-7 text-amber-500" strokeWidth={2.5} />
         </span>
-        <span className="flex flex-col leading-tight">
-          <span className="text-sm font-bold uppercase tracking-wide">Admissions Open</span>
-          <span className="text-[10px] font-semibold tracking-wider text-amber-100">2026-27</span>
+        <span className="text-center text-xs font-bold leading-snug tracking-wide">
+          Admission<br />Enquiry
         </span>
       </button>
 
