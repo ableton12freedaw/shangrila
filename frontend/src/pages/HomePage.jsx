@@ -82,7 +82,7 @@ export const HomePage = () => {
       </section>
 
       <PageSection className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8" testId="home-welcome-notice-combined-section">
-        <div className="grid gap-6 md:grid-cols-[1.3fr_0.7fr]" data-testid="home-welcome-notice-layout-grid">
+        <div className="grid items-start gap-6 md:grid-cols-[1.3fr_0.7fr]" data-testid="home-welcome-notice-layout-grid">
           <Card className="relative overflow-hidden border-amber-100 bg-white/95 shadow-sm" data-testid="home-welcome-message-card">
             <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-b from-amber-500 to-primary" />
             <CardContent className="space-y-4 p-7 pl-8 md:p-10 md:pl-12">
@@ -97,8 +97,8 @@ export const HomePage = () => {
           </Card>
 
           <Card className="overflow-hidden border-primary/30 bg-primary text-white" data-testid="home-notice-board-card">
-            <CardContent className="flex h-full flex-col p-5 sm:p-6" data-testid="home-notice-board-content">
-              <div className="mb-4 flex items-center gap-2.5">
+            <CardContent className="p-5 sm:p-6" data-testid="home-notice-board-content">
+              <div className="mb-3 flex items-center gap-2.5">
                 <span className="inline-flex rounded-lg bg-amber-500/20 p-1.5">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 21h-9a3 3 0 0 1 -3 -3v-1h10v2a2 2 0 0 0 4 0v-14a2 2 0 1 1 2 2h-2m2 -4h-11a3 3 0 0 0 -3 3v11" /><path d="M9 7l4 0" /><path d="M9 11l4 0" /></svg>
                 </span>
@@ -106,7 +106,7 @@ export const HomePage = () => {
                   Notice Board
                 </p>
               </div>
-              <div className="flex-1 overflow-hidden rounded-xl border border-white/10 bg-white/5" data-testid="home-notice-board-vertical-wrapper">
+              <div className="h-56 overflow-hidden rounded-xl border border-white/10 bg-white/5" data-testid="home-notice-board-vertical-wrapper">
                 <div className="notice-vertical-track space-y-2.5 p-3" data-testid="home-notice-board-vertical-track">
                   {[...noticeBoardItems, ...noticeBoardItems].map((notice, index) => (
                     <div
