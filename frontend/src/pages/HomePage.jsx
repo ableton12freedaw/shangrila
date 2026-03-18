@@ -97,20 +97,29 @@ export const HomePage = () => {
           </Card>
 
           <Card className="overflow-hidden border-primary/30 bg-primary text-white" data-testid="home-notice-board-card">
-            <CardContent className="space-y-4 p-5 sm:p-6" data-testid="home-notice-board-content">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-400" data-testid="home-notice-board-label">
-                Notice Board
-              </p>
-              <div className="h-64 overflow-hidden rounded-xl border border-white/15 bg-white/10" data-testid="home-notice-board-vertical-wrapper">
-                <div className="notice-vertical-track space-y-3 p-3" data-testid="home-notice-board-vertical-track">
+            <CardContent className="flex h-full flex-col p-5 sm:p-6" data-testid="home-notice-board-content">
+              <div className="mb-4 flex items-center gap-2.5">
+                <span className="inline-flex rounded-lg bg-amber-500/20 p-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 21h-9a3 3 0 0 1 -3 -3v-1h10v2a2 2 0 0 0 4 0v-14a2 2 0 1 1 2 2h-2m2 -4h-11a3 3 0 0 0 -3 3v11" /><path d="M9 7l4 0" /><path d="M9 11l4 0" /></svg>
+                </span>
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-400" data-testid="home-notice-board-label">
+                  Notice Board
+                </p>
+              </div>
+              <div className="flex-1 overflow-hidden rounded-xl border border-white/10 bg-white/5" data-testid="home-notice-board-vertical-wrapper">
+                <div className="notice-vertical-track space-y-2.5 p-3" data-testid="home-notice-board-vertical-track">
                   {[...noticeBoardItems, ...noticeBoardItems].map((notice, index) => (
-                    <p
-                      key={`${notice}-${index}`}
-                      className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm leading-6 text-slate-100"
+                    <div
+                      key={`${notice.title}-${index}`}
+                      className="rounded-xl border border-white/10 bg-white/10 px-4 py-3"
                       data-testid={`home-notice-item-${index + 1}`}
                     >
-                      {notice}
-                    </p>
+                      <span className="mb-1 inline-block rounded-full bg-amber-500/25 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-300">
+                        {notice.tag}
+                      </span>
+                      <p className="text-sm font-semibold leading-snug text-white">{notice.title}</p>
+                      <p className="mt-1 text-xs leading-5 text-slate-300">{notice.text}</p>
+                    </div>
                   ))}
                 </div>
               </div>

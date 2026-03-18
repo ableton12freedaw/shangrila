@@ -70,7 +70,11 @@
 }
 
 .notice-vertical-track {
-    animation: notice-vertical-scroll 18s linear infinite;
+    animation: notice-vertical-scroll 40s linear infinite;
+}
+
+.notice-vertical-track:hover {
+    animation-play-state: paused;
 }
 
 /* Floating bell pulse glow */

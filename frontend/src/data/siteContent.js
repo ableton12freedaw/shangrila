@@ -33,11 +33,46 @@ export const quickStats = [
 ];
 
 export const noticeBoardItems = [
-  "Admissions Open for Nursery to 12th (2026-27)",
-  "School Timings: Mon-Fri 8:45 AM to 2:45 PM",
-  "Saturday Timings: 8:45 AM to 12:45 PM",
-  "Visitor Timings: 9:00 AM to 2:00 PM",
-  "Follow us on Facebook, Instagram & LinkedIn",
+  {
+    tag: "Exam",
+    title: "Final Examination",
+    text: "The Final Examination will be conducted from 06 March to 27 March 2026. Students are advised to prepare well and follow the examination schedule.",
+  },
+  {
+    tag: "Event",
+    title: "Foundation Day Celebration – 10 February",
+    text: "The school celebrated its Foundation Day with great enthusiasm and pride. Various cultural activities and programs highlighted the spirit of our institution.",
+  },
+  {
+    tag: "Tech",
+    title: "Robo Fest",
+    text: "Students showcased their creativity and technical skills through innovative robotic models. The event encouraged interest in technology, science, and future innovations.",
+  },
+  {
+    tag: "Annual",
+    title: "Krishnayana – Annual Function",
+    text: "The Annual Function \"Krishnayana\" celebrated culture, art, and teamwork. Students presented wonderful performances including dance, drama, and music.",
+  },
+  {
+    tag: "Dance",
+    title: "Tarang – District Level Dance Competition",
+    text: "Students participated enthusiastically in the district level dance competition. Their soulful performances reflected talent, confidence, and dedication.",
+  },
+  {
+    tag: "Art",
+    title: "Sketch-A-Thon",
+    text: "Students expressed creative ideas on environmental awareness through their artwork. The activity promoted climate-conscious thinking and artistic expression.",
+  },
+  {
+    tag: "Sports",
+    title: "Cyclothon",
+    text: "The Cyclothon promoted fitness and awareness about reducing carbon footprints. Students participated actively, spreading the message of a healthy and eco-friendly lifestyle.",
+  },
+  {
+    tag: "Admissions",
+    title: "Admissions Open for Nursery to 12th (2026-27)",
+    text: "School Timings: Mon-Fri 8:45 AM to 2:45 PM. Saturday: 8:45 AM to 12:45 PM. Visitor Timings: 9:00 AM to 2:00 PM.",
+  },
 ];
 
 export const noticeBoardEvents = [
