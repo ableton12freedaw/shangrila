@@ -2,7 +2,7 @@ import { useState, useRef, useCallback } from "react";
 import { Bell } from "lucide-react";
 
 const GOOGLE_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScZqBu5DMva2SpGO9biar1F8iMXNgbE7RGY4tuUgVOdqoW8HQ/viewform";
+  "https://docs.google.com/forms/d/e/1FAIpQLSdRd3NX0wYa47VHDp-lxYTlOjphat1losHcypKJx6aB4ITd7w/viewform";
 
 export const FloatingAdmissionBell = () => {
   const btnRef = useRef(null);
