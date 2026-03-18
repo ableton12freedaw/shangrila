@@ -73,30 +73,41 @@ export const AcademicsPage = () => {
         <Card className="border-slate-200 bg-white" data-testid="academics-staff-card-wrapper">
           <CardContent className="p-7">
             <h3 className="text-3xl font-bold text-slate-900" data-testid="academics-staff-heading">
-              Staff Directory
+              Our Team
             </h3>
             <p className="mt-2 text-sm text-slate-600" data-testid="academics-staff-subheading">
-              Staff cards added below curriculum, as requested.
+              Dedicated educators and support staff who shape the Shangrila experience.
             </p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-testid="academics-staff-grid">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" data-testid="academics-staff-grid">
               {academicStaff.map((staff) => (
-                <Card key={staff.name} className="border-slate-200 bg-slate-50" data-testid={`academics-staff-item-${slugify(staff.name)}`}>
-                  <CardContent className="space-y-2 p-5">
-                    <h4 className="text-lg font-bold text-primary" data-testid={`academics-staff-name-${slugify(staff.name)}`}>
+                <Card key={staff.name} className="overflow-hidden border-slate-200 bg-slate-50" data-testid={`academics-staff-item-${slugify(staff.name)}`}>
+                  {staff.photo ? (
+                    <div className="aspect-square w-full overflow-hidden bg-slate-200">
+                      <img
+                        src={staff.photo}
+                        alt={staff.name}
+                        className="h-full w-full object-cover object-top"
+                        loading="lazy"
+                        data-testid={`academics-staff-photo-${slugify(staff.name)}`}
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex aspect-square w-full items-center justify-center bg-primary/10" data-testid={`academics-staff-placeholder-${slugify(staff.name)}`}>
+                      <span className="text-4xl font-black text-primary/30">{staff.name.split(" ").pop()[0]}</span>
+                    </div>
+                  )}
+                  <CardContent className="space-y-1 p-4">
+                    <h4 className="text-sm font-bold text-primary" data-testid={`academics-staff-name-${slugify(staff.name)}`}>
                       {staff.name}
                     </h4>
-                    <p className="text-xs font-bold uppercase tracking-wide text-amber-700" data-testid={`academics-staff-designation-${slugify(staff.name)}`}>
+                    <p className="text-[11px] font-bold uppercase tracking-wide text-amber-700" data-testid={`academics-staff-designation-${slugify(staff.name)}`}>
                       {staff.designation}
                     </p>
-                    <p className="text-sm text-slate-700" data-testid={`academics-staff-qualification-${slugify(staff.name)}`}>
-                      <span className="font-semibold">Qualification:</span> {staff.qualification}
-                    </p>
-                    <p className="text-sm text-slate-700" data-testid={`academics-staff-experience-${slugify(staff.name)}`}>
-                      <span className="font-semibold">Experience:</span> {staff.experience}
-                    </p>
-                    <p className="text-sm text-slate-700" data-testid={`academics-staff-specialization-${slugify(staff.name)}`}>
-                      <span className="font-semibold">Specialization:</span> {staff.specialization}
-                    </p>
+                    {staff.specialization && (
+                      <p className="text-xs text-slate-600" data-testid={`academics-staff-specialization-${slugify(staff.name)}`}>
+                        {staff.specialization}
+                      </p>
+                    )}
                   </CardContent>
                 </Card>
               ))}
