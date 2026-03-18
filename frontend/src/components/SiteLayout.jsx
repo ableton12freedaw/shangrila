@@ -88,7 +88,7 @@ export const SiteLayout = ({ children }) => {
                 <span className="truncate text-sm font-black tracking-wide text-[#0A192F] sm:text-base md:text-xl" data-testid="header-school-name">
                   {schoolIdentity.name}
                 </span>
-                <span className="truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-700 sm:text-xs">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.18em] text-amber-700 sm:text-[10px] md:text-xs">
                   {schoolIdentity.tagline}
                 </span>
               </span>
@@ -114,7 +114,7 @@ export const SiteLayout = ({ children }) => {
                   to={item.path}
                   data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                   className={({ isActive }) =>
-                    `relative px-3.5 py-2 text-xs font-bold uppercase tracking-wider transition-colors lg:text-[13px] ${
+                    `relative whitespace-nowrap px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors lg:px-3.5 lg:text-[13px] ${
                       isActive
                         ? "text-primary after:absolute after:bottom-0 after:left-1/2 after:h-[2.5px] after:w-5 after:-translate-x-1/2 after:rounded-full after:bg-amber-500"
                         : "text-slate-600 hover:text-primary"
