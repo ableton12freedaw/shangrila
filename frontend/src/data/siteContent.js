@@ -1,3 +1,19 @@
+export const alumniSuccessStories = [
+  { name: "Ojas Deotale", achievement: "Won 3 Gold Medals in Asian Games Archery, Arjun Award Winner" },
+  { name: "Dr. Prajakta Lakade", achievement: "Distinguished medical professional, completed MBBS and Master of Surgery in Obstetrics & Gynaecology from BJMC, Pune" },
+  { name: "Sahil Thool", achievement: "Achieved the prestigious CA qualification, excelling in finance and accountancy" },
+  { name: "Dr. Ankush Navghare", achievement: "Qualified medical professional with MBBS and Master of Medicine (Dermatology) from GMC, Nagpur" },
+  { name: "Anvika Kangale", achievement: "House staff in Lata Mangheshkar Hospital" },
+  { name: "Divya Vyas", achievement: "Achieved the prestigious CA qualification, excelling in finance and accountancy" },
+  { name: "Darshan Gautre", achievement: "Qualified agriculture professional, currently pursuing education abroad" },
+  { name: "Jayashree Nandanwar", achievement: "Associated with Axis Bank, serving in the Banking sector" },
+  { name: "Falguni Shete", achievement: "Professional fashion designer" },
+  { name: "Aishwarya Dhole", achievement: "Completed Computer Engineering from Nagpur" },
+  { name: "Ritika Lakade", achievement: "Completed B.E. in Chemical Engineering from LIT, Nagpur, and holds an MBA from Mumbai" },
+  { name: "Suchita Lute", achievement: "Completed Electrical Engineering from Nagpur" },
+];
+
+
 export const schoolIdentity = {
   name: "THE SHANGRILA ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
   tagline: "EDUCATING THE MINDS, REACHING THE HEARTS",

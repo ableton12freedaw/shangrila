@@ -5,6 +5,7 @@ import { SEOHead } from "@/components/SEOHead";
 import {
   aboutPhilosophy,
   aboutVision,
+  alumniSuccessStories,
   coreValues,
   imageAssets,
   infrastructureOverview,
@@ -113,6 +114,29 @@ export const AboutPage = () => {
             </ul>
           </CardContent>
         </Card>
+        </PageSection>
+
+        <PageSection className="mt-12" testId="about-alumni-section">
+          <Card className="border-slate-200 bg-white" data-testid="about-alumni-card">
+            <CardContent className="p-7">
+              <h3 className="text-3xl font-bold text-slate-900" data-testid="about-alumni-heading">Alumni Success Stories</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-600 md:text-base" data-testid="about-alumni-intro">
+                Our alumni continue to make us proud, achieving remarkable milestones across sports, academics, and professional fields.
+              </p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" data-testid="about-alumni-grid">
+                {alumniSuccessStories.map((alumni) => (
+                  <div
+                    key={alumni.name}
+                    className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3"
+                    data-testid={`about-alumni-item-${slugify(alumni.name)}`}
+                  >
+                    <p className="text-sm font-bold text-primary">{alumni.name}</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-600">{alumni.achievement}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </PageSection>
       </div>
     </>
