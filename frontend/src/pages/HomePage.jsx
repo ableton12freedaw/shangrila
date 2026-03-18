@@ -82,7 +82,7 @@ export const HomePage = () => {
       </section>
 
       <PageSection className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8" testId="home-welcome-notice-combined-section">
-        <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]" data-testid="home-welcome-notice-layout-grid">
+        <div className="grid gap-6 md:grid-cols-[1.3fr_0.7fr]" data-testid="home-welcome-notice-layout-grid">
           <Card className="relative overflow-hidden border-amber-100 bg-white/95 shadow-sm" data-testid="home-welcome-message-card">
             <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-b from-amber-500 to-primary" />
             <CardContent className="space-y-4 p-7 pl-8 md:p-10 md:pl-12">
