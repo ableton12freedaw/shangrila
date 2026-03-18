@@ -78,11 +78,11 @@ export const AcademicsPage = () => {
             <p className="mt-2 text-sm text-slate-600" data-testid="academics-staff-subheading">
               Dedicated educators and support staff who shape the Shangrila experience.
             </p>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" data-testid="academics-staff-grid">
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4" data-testid="academics-staff-grid">
               {academicStaff.map((staff) => (
                 <Card key={staff.name} className="overflow-hidden border-slate-200 bg-slate-50" data-testid={`academics-staff-item-${slugify(staff.name)}`}>
                   {staff.photo ? (
-                    <div className="aspect-square w-full overflow-hidden bg-slate-200">
+                    <div className="aspect-[3/4] w-full overflow-hidden bg-slate-200">
                       <img
                         src={staff.photo}
                         alt={staff.name}
@@ -92,19 +92,19 @@ export const AcademicsPage = () => {
                       />
                     </div>
                   ) : (
-                    <div className="flex aspect-square w-full items-center justify-center bg-primary/10" data-testid={`academics-staff-placeholder-${slugify(staff.name)}`}>
-                      <span className="text-4xl font-black text-primary/30">{staff.name.split(" ").pop()[0]}</span>
+                    <div className="flex aspect-[3/4] w-full items-center justify-center bg-primary/10" data-testid={`academics-staff-placeholder-${slugify(staff.name)}`}>
+                      <span className="text-3xl font-black text-primary/30 sm:text-4xl">{staff.name.split(" ").pop()[0]}</span>
                     </div>
                   )}
-                  <CardContent className="space-y-1 p-4">
-                    <h4 className="text-sm font-bold text-primary" data-testid={`academics-staff-name-${slugify(staff.name)}`}>
+                  <CardContent className="space-y-0.5 p-2.5 sm:space-y-1 sm:p-4">
+                    <h4 className="text-xs font-bold text-primary sm:text-sm" data-testid={`academics-staff-name-${slugify(staff.name)}`}>
                       {staff.name}
                     </h4>
-                    <p className="text-[11px] font-bold uppercase tracking-wide text-amber-700" data-testid={`academics-staff-designation-${slugify(staff.name)}`}>
+                    <p className="text-[10px] font-bold uppercase tracking-wide text-amber-700 sm:text-[11px]" data-testid={`academics-staff-designation-${slugify(staff.name)}`}>
                       {staff.designation}
                     </p>
                     {staff.specialization && (
-                      <p className="text-xs text-slate-600" data-testid={`academics-staff-specialization-${slugify(staff.name)}`}>
+                      <p className="hidden text-xs text-slate-600 sm:block" data-testid={`academics-staff-specialization-${slugify(staff.name)}`}>
                         {staff.specialization}
                       </p>
                     )}
