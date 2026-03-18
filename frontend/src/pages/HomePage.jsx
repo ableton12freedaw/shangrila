@@ -9,6 +9,7 @@ import {
   imageAssets,
   leadershipMessages,
   noticeBoardItems,
+  parentTestimonials,
   quickStats,
   schoolIdentity,
   welcomeMessage,
@@ -200,6 +201,31 @@ export const HomePage = () => {
                 <p className="text-sm leading-7 text-slate-600" data-testid={`home-leadership-summary-${slugify(item.role)}`}>
                   {item.summary}
                 </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </PageSection>
+
+      <PageSection className="mt-14" testId="home-parents-corner-section">
+        <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-700" data-testid="home-parents-corner-label">
+          Parents' Corner
+        </p>
+        <h2 className="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl" data-testid="home-parents-corner-heading">
+          What Parents Say About Us
+        </h2>
+        <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-testid="home-parents-corner-grid">
+          {parentTestimonials.map((t) => (
+            <Card key={t.name} className="border-slate-200 bg-white/95" data-testid={`home-testimonial-${slugify(t.name)}`}>
+              <CardContent className="flex h-full flex-col p-5">
+                <Quote className="mb-2 h-6 w-6 text-amber-500/60" />
+                <p className="flex-1 text-sm italic leading-7 text-slate-600" data-testid={`home-testimonial-quote-${slugify(t.name)}`}>
+                  "{t.quote}"
+                </p>
+                <div className="mt-4 border-t border-slate-100 pt-3">
+                  <p className="text-sm font-bold text-primary" data-testid={`home-testimonial-name-${slugify(t.name)}`}>{t.name}</p>
+                  <p className="text-xs text-slate-500" data-testid={`home-testimonial-context-${slugify(t.name)}`}>{t.context}</p>
+                </div>
               </CardContent>
             </Card>
           ))}

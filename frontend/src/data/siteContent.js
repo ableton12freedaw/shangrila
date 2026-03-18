@@ -13,6 +13,15 @@ export const alumniSuccessStories = [
   { name: "Suchita Lute", achievement: "Completed Electrical Engineering from Nagpur" },
 ];
 
+export const parentTestimonials = [
+  { name: "Sanjay Shivankar", context: "Parent of two daughters, PTA member", quote: "Shangrila School has been a guiding light for our family\u2014our elder daughter thrived, and our younger one continues to shine in 10th. The school\u2019s personal attention and holistic approach make every parent proud." },
+  { name: "Hemant Joshi", context: "Parent since 2 years", quote: "In just two years, we\u2019ve seen remarkable growth in our child\u2014both academically and in extracurriculars. Shangrila nurtures talent while building strong values." },
+  { name: "Mrs. Nalge", context: "Parent of 3rd grader", quote: "The teachers at Shangrila make learning engaging and meaningful. My child loves school and has grown in confidence and creativity." },
+  { name: "Mr. Satpute", context: "Parent of 4th grader", quote: "Shangrila goes beyond academics, fostering discipline, sportsmanship, and cultural awareness. Every child here feels supported and motivated." },
+  { name: "Anju Patel", context: "Parent of 9th grader", quote: "From academics to arts and sports, Shangrila provides a nurturing environment for all-round development. Our child has truly blossomed here." },
+];
+
+
 
 export const schoolIdentity = {
   name: "THE SHANGRILA ENGLISH HIGH SCHOOL & JUNIOR COLLEGE",
